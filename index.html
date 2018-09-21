@@ -16,6 +16,9 @@
 					<h2>Plugins</h2>
 				</div>
 				<div class="col-12 mt-3">
+					<div id="alertBrowser" class="alert alert-danger d-none" role="alert">
+						<p class="text-center">Your browser is not up to date, please update your browser or try another one.</p>
+					</div>
 					<form>
 						<div class="row">
 							<div class="col-3">
@@ -57,7 +60,7 @@
 						<div class="row mt-3">
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="dropdown">
+									<input class="form-check-input require-popper" type="checkbox" name="dropdown">
 									<label class="form-check-label">
 										Dropdown
 									</label>
@@ -75,7 +78,7 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="popover">
+									<input class="form-check-input require-popper" type="checkbox" name="popover">
 									<label class="form-check-label">
 										Popover
 									</label>
@@ -103,9 +106,19 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="tab">
+									<input class="form-check-input require-popper" type="checkbox" name="tooltip">
 									<label class="form-check-label">
 										Tooltip
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-3">
+								<div class="form-check">
+									<input id="checkboxPopper" class="form-check-input" type="checkbox" name="popper">
+									<label class="form-check-label" for="checkboxPopper">
+										Include Popper.js
 									</label>
 								</div>
 							</div>
