@@ -8,7 +8,7 @@ import { createModal, showModal, hideModal } from './dialog-loader'
 import 'bootstrap/dist/css/bootstrap.css'
 
 const bsCDN = 'https://unpkg.com/bootstrap/js/dist/'
-const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.min.js'
+const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
 
 const supportedBrowser = !!new Blob
 let chooseToImportPopper = true
@@ -20,7 +20,9 @@ $(() => {
 	const $alertBrowser = $('#alertBrowser')
 	const $form = $('form')
 	const $checkBoxRequirePopper = $('.require-popper')
-	const $checkboxPopper = $('#checkboxPopper')
+  const $checkboxPopper = $('#checkboxPopper')
+  const $chkMinify = $('#chkMinify')
+  const popperCheckboxList = [].slice.call(document.querySelectorAll('.require-popper'))
 
 	if (!supportedBrowser) {
 		$form.remove()
@@ -34,7 +36,7 @@ $(() => {
 
 	$checkBoxRequirePopper.on('click', function () {
 		if (!this.checked) {
-			const stillCheckedList = [].slice.call(document.querySelectorAll('.require-popper'))
+			const stillCheckedList = popperCheckboxList
 				.filter((chk) => chk.checked)
 
 			if (stillCheckedList.length === 0) {
@@ -49,8 +51,9 @@ $(() => {
 		const formData = $form.serializeArray()
 		if (formData.length === 0) {
 			return
-		}
+    }
 
+    const minify = $chkMinify[0].checked
     showModal(() => {
       const listOfRequest = [
         axios.get(`${bsCDN}util.js`)
@@ -70,11 +73,15 @@ $(() => {
           axios.get(`${bsCDN}${value}.js`)
         )
       })
+
+      if (minify) {
+        fileName = 'bootstrap.custom.min.js'
+      }
   
       axios.all(listOfRequest)
         .then((listOfFiles) => {
           hideModal()        
-          downloadFile(fileName, createFileContent(listOfFiles))
+          downloadFile(fileName, createFileContent(listOfFiles, minify))
         })
         .catch(() => {
           hideModal()
