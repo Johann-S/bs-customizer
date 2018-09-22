@@ -23,8 +23,8 @@
 						<div class="row">
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="alert">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkAlert" name="alert">
+									<label class="form-check-label" for="chkAlert">
 										Alert
 									</label>
 								</div>
@@ -32,8 +32,8 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="button">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkButton" name="button">
+									<label class="form-check-label" for="chkButton">
 										Button
 									</label>
 								</div>
@@ -41,8 +41,8 @@
 						
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="carousel">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkCarousel" name="carousel">
+									<label class="form-check-label" for="chkCarousel">
 										Carousel
 									</label>
 								</div>
@@ -50,8 +50,8 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="collapse">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkCollapse" name="collapse">
+									<label class="form-check-label" for="chkCollapse">
 										Collapse
 									</label>
 								</div>
@@ -60,8 +60,8 @@
 						<div class="row mt-3">
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input require-popper" type="checkbox" name="dropdown">
-									<label class="form-check-label">
+									<input class="form-check-input require-popper" type="checkbox" id="chkDropdown" name="dropdown">
+									<label class="form-check-label" for="chkDropdown">
 										Dropdown
 									</label>
 								</div>
@@ -69,8 +69,8 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="modal">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkModal" name="modal">
+									<label class="form-check-label" for="chkModal">
 										Modal
 									</label>
 								</div>
@@ -78,8 +78,8 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input require-popper" type="checkbox" name="popover">
-									<label class="form-check-label">
+									<input class="form-check-input require-popper" type="checkbox" id="chkPopover" name="popover">
+									<label class="form-check-label" for="chkPopover">
 										Popover
 									</label>
 								</div>
@@ -87,8 +87,8 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="scrollspy">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkScrollspy" name="scrollspy">
+									<label class="form-check-label" for="chkScrollspy">
 										ScrollSpy
 									</label>
 								</div>
@@ -97,8 +97,8 @@
 						<div class="row mt-3">
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" name="tab">
-									<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" id="chkTab" name="tab">
+									<label class="form-check-label" for="chkTab">
 										Tab
 									</label>
 								</div>
@@ -106,26 +106,34 @@
 
 							<div class="col-3">
 								<div class="form-check">
-									<input class="form-check-input require-popper" type="checkbox" name="tooltip">
-									<label class="form-check-label">
+									<input class="form-check-input require-popper" type="checkbox" id="chkTooltip" name="tooltip">
+									<label class="form-check-label" for="chkTooltip">
 										Tooltip
 									</label>
 								</div>
 							</div>
-						</div>
-						<div class="row mt-3">
-							<div class="col-3">
-								<div class="form-check">
-									<input id="checkboxPopper" class="form-check-input" type="checkbox" name="popper">
-									<label class="form-check-label" for="checkboxPopper">
-										Include Popper.js
-									</label>
-								</div>
-							</div>
-						</div>
-						<button id="btnSubmit" type="submit" class="btn btn-primary mt-3">Build</button>
+            </div>
 					</form>
-				</div>
+        </div>
+
+        <div class="col-12 mt-3">
+          <h2>Options</h2>
+        </div>
+        <div class="col-12 mt-3">
+          <div class="row">
+            <div class="col-3">
+              <div class="form-check">
+                <input id="checkboxPopper" class="form-check-input" type="checkbox" name="popper">
+                <label class="form-check-label" for="checkboxPopper">
+                  Include Popper.js
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button id="btnSubmit" type="button" class="btn btn-primary mt-3">Build</button>
+        </div>
 			</div>
 		</div>
 		<script src="dist/bs-customizer.min.js"></script>

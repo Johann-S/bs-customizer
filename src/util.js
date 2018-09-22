@@ -21,6 +21,20 @@ const formatList = (list) => {
 	return listPlugin
 }
 
+const taskDebounce = (fn) => {
+  let scheduled = false;
+  return () => {
+    if (!scheduled) {
+      scheduled = true
+      setTimeout(() => {
+        scheduled = false
+        fn()
+      }, 0)
+    }
+  }
+}
+
 export {
-	formatList
+  formatList,
+  taskDebounce
 }

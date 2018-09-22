@@ -39,15 +39,25 @@ module.exports = (env, args) => {
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: {
-                // you can specify a publicPath here
-                // by default it use publicPath in webpackOptions.output
-                publicPath: '../'
-              }
+              options: {}
             },
             'css-loader'
           ]
-        }
+        },
+        {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]'
+          }
+        },
+        {
+          test: /\.svg/,
+          loader: 'file-loader',
+          options: {
+            name: 'svg/[name].[ext]'
+          }
+			  }
       ]
     }
   }
@@ -64,6 +74,9 @@ module.exports = (env, args) => {
     }
   } else {
     conf.devtool = 'source-map'
+    conf.devServer = {
+      publicPath: '/dist/'
+    }
   }
 
   return conf
