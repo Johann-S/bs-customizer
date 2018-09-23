@@ -1,9 +1,15 @@
 import $ from 'jquery'
 import axios from 'axios'
 
-import { createFileContent, downloadFile } from './file-util'
+import { createFileContent, generateLink } from './file-util'
 import { formatList, delay } from './util'
-import { createModal, showModal, hideModal, updateDialogStatus } from './dialog-loader'
+import {
+  createModal,
+  showModal,
+  hideModal,
+  updateDialogStatus,
+  updateLink
+} from './dialog-loader'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
@@ -87,13 +93,13 @@ $(() => {
             const fileContent = createFileContent(listOfFiles, minify)
 
             delay(10, () => {
-              downloadFile(fileName, fileContent)
-              hideModal()
+              updateLink(fileName, generateLink(fileContent))
             })  
           })
         })
         .catch((err) => {
           hideModal()
+          throw new Error(err)
         })
     })
 	})

@@ -30,7 +30,7 @@ const createFileContent = (listOfFiles, minify) => {
 	return content
 }
 
-const downloadFile = (fileName, fileContent) => {
+const generateLink = (fileContent) => {
 	const fileData = new Blob([ fileContent ], {
 		type: 'text/plain;charset=utf-8'
 	})
@@ -39,15 +39,10 @@ const downloadFile = (fileName, fileContent) => {
     type: 'application/javascript',
   })
 
-  const a = document.createElement('a')
-  a.href = downloadUrl
-  a.setAttribute('download', fileName)
-  a.click()
-
-  URL.revokeObjectURL(downloadUrl)
+  return downloadUrl
 }
 
 export {
 	createFileContent,
-	downloadFile,
+	generateLink,
 }
