@@ -3,13 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
-let fileName = 'bs-customizer'
+let fileName = 'bs-customizer.min'
 
 module.exports = (env, args) => {
-  if (args.mode === 'production') {
-    fileName = `${fileName}.min`
-  }
-
   const conf = {
     entry: './src/index.js',
     output: {
