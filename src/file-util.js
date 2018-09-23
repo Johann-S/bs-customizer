@@ -32,7 +32,7 @@ const createFileContent = (listOfFiles, minify) => {
 
 const generateLink = (fileContent) => {
 	const fileData = new Blob([ fileContent ], {
-		type: 'text/plain;charset=utf-8'
+		type: 'text/javascript;charset=utf-8'
 	})
 
 	const downloadUrl = URL.createObjectURL(fileData, {
