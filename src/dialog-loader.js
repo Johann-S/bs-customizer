@@ -2,8 +2,6 @@ import $ from 'jquery'
 import 'bootstrap/js/dist/modal'
 import 'boxicons/css/boxicons.css'
 
-import { taskDebounce } from './util';
-
 let $modal
 let $loadingStatus
 const dialogClass = 'dialog-loader'
@@ -29,26 +27,28 @@ const createModal = () => {
 }
 
 const showModal = (callback) => {
-  $loadingStatus.text('Building your custom Bootstrap...')
+  $loadingStatus.text('Downloading your assets...')
   $modal
     .one('shown.bs.modal', () => {
-      taskDebounce(() => {
-        callback()
-      })()
+      callback()
     })
     .modal('show')
 }
 
+const updateDialogStatus = (text) => {
+  $loadingStatus.text(text)
+  return $loadingStatus[0].offsetHeight
+}
 const hideModal = () => {
-  $modal
-    .one('hidden.bs.modal', () => {
-      $loadingStatus.text('')
-    })
-    .modal('hide')
+  $modal.one('hidden.bs.modal', () => {
+    updateDialogStatus('')
+  })
+  .modal('hide')
 }
 
 export {
   createModal,
   showModal,
   hideModal,
+  updateDialogStatus,
 }

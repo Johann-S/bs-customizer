@@ -2,8 +2,8 @@ import $ from 'jquery'
 import axios from 'axios'
 
 import { createFileContent, downloadFile } from './file-util'
-import { formatList } from './util'
-import { createModal, showModal, hideModal } from './dialog-loader'
+import { formatList, delay } from './util'
+import { createModal, showModal, hideModal, updateDialogStatus } from './dialog-loader'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
@@ -81,10 +81,18 @@ $(() => {
   
       axios.all(listOfRequest)
         .then((listOfFiles) => {
-          hideModal()        
-          downloadFile(fileName, createFileContent(listOfFiles, minify))
+          updateDialogStatus('Building your assets...')
+
+          delay(10, () => {
+            const fileContent = createFileContent(listOfFiles, minify)
+
+            delay(10, () => {
+              downloadFile(fileName, fileContent)
+              hideModal()
+            })  
+          })
         })
-        .catch(() => {
+        .catch((err) => {
           hideModal()
         })
     })
