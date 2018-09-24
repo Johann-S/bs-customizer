@@ -1,9 +1,15 @@
 const path = require('path')
+const glob = require('glob-all')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 let fileName = 'bs-customizer.min'
+const paths = {
+  src: `${path.join(__dirname, 'src/')}*.js`,
+  index: `${path.join(__dirname, './')}*.html`
+}
 
 module.exports = (env, args) => {
   const conf = {
@@ -16,7 +22,13 @@ module.exports = (env, args) => {
       new MiniCssExtractPlugin({
         filename: `${fileName}.css`,
         chunkFilename: '[id].css'
-      })
+      }),
+      new PurgecssPlugin({
+        paths: glob.sync([
+          paths.src,
+          paths.index
+        ]),
+      }),
     ],
     module: {
       rules: [
