@@ -3,15 +3,15 @@
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-customizer.svg)](https://david-dm.org/Johann-S/bs-customizer)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-customizer.svg)](https://david-dm.org/Johann-S/bs-customizer?type=dev)
 
-A simple customizer which allow you to build a custom version of Bootstrap 4
+A simple customizer which allows you to build a custom version of [Bootstrap](https://getbootstrap.com/) v4
 
 Features:
 
- - Select just a few plugins
- - Minify your custom version
- - Choose to include Popper.js or not
+- Select which plugins you want to use
+- Choose to include Popper.js or not
+- Minify your custom version
 
-You can use it --> [here](https://johann-s.github.io/bs-customizer/)
+You can use it [here](https://johann-s.github.io/bs-customizer/)
 
 ## Support me
 
