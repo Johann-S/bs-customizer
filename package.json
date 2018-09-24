@@ -4,7 +4,7 @@
   "description": "create a custom bootstrap",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config webpack.config.js",
-    "build": "webpack --mode=production --config webpack.config.js"
+    "prod": "webpack --mode=production --config webpack.config.js"
   },
   "keywords": [
     "customizer",
