@@ -41,7 +41,7 @@ const createModal = () => {
   $modalHeader = $modal.find('.modal-header')
 
   $modal.on('hidden.bs.modal', () => {
-    updateDialogStatus('')
+    $loadingStatus.text('')
 
     $modalHeader.addClass('d-none')
     URL.revokeObjectURL($generatedLink.attr('href'))
@@ -54,17 +54,12 @@ const createModal = () => {
 }
 
 const showModal = (callback) => {
-  $loadingStatus.text('Downloading your assets...')
+  $loadingStatus.text('Building your custom Bootstrap...')
   $modal
     .one('shown.bs.modal', () => {
       callback()
     })
     .modal('show')
-}
-
-const updateDialogStatus = (text) => {
-  $loadingStatus.text(text)
-  return $loadingStatus[0].offsetHeight
 }
 
 const updateLink = (fileName, link) => {
@@ -85,6 +80,5 @@ export {
   createModal,
   showModal,
   hideModal,
-  updateDialogStatus,
   updateLink,
 }

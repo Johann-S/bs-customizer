@@ -21,13 +21,12 @@ const formatList = (list) => {
   return listPlugin
 }
 
-const delay = (time, fn) => {
-  setTimeout(() => {
-    fn()
-  }, time)
-}
+const ucfirst = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
+
+const uniqArray = (array) => array.filter((elem, pos, arr) => arr.indexOf(elem) === pos)
 
 export {
   formatList,
-  delay,
+  ucfirst,
+  uniqArray,
 }

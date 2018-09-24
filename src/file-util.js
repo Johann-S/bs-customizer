@@ -10,12 +10,18 @@ const uglifyConfig = {
   },
 }
 
-const createFileContent = (listOfFiles, minify) => {
+const concatFileData = (files) => {
   let content = ''
 
-  listOfFiles.forEach((file) => {
+  files.forEach((file) => {
     content += file.data
   })
+
+  return content
+}
+
+const createJsFileContent = (jsFiles, minify) => {
+  let content = concatFileData(jsFiles)
 
   if (minify) {
     const minifyResult = uglify.minify(content, uglifyConfig)
@@ -30,19 +36,20 @@ const createFileContent = (listOfFiles, minify) => {
   return content
 }
 
-const generateLink = (fileContent) => {
-  const fileData = new Blob([ fileContent ], {
-    type: 'text/javascript;charset=utf-8'
-  })
+const createCssFileContent = (scssFiles) => {
+  return concatFileData(scssFiles)
+}
 
-  const downloadUrl = URL.createObjectURL(fileData, {
-    type: 'application/javascript',
+const generateLink = (fileContent) => {
+  const downloadUrl = URL.createObjectURL(fileContent, {
+    type: 'application/zip',
   })
 
   return downloadUrl
 }
 
 export {
-  createFileContent,
+  createJsFileContent,
+  createCssFileContent,
   generateLink,
 }
