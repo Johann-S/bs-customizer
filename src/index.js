@@ -1,40 +1,36 @@
 import $ from 'jquery'
-import axios from 'axios'
+import Sass from 'sass.js/dist/sass'
 
-import { createFileContent, generateLink } from './file-util'
-import { formatList, delay } from './util'
+import { build } from './build'
+import { formatList, ucfirst } from './util'
 import {
   createModal,
   showModal,
-  hideModal,
-  updateDialogStatus,
   updateLink
 } from './dialog-loader'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
 
-const bsCDN = 'https://unpkg.com/bootstrap/js/dist/'
-const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
-
 const supportedBrowser = !!new Blob
 let chooseToImportPopper = true
-let fileName = 'bootstrap.custom.js'
 
 $(() => {
+  if (!supportedBrowser) {
+    $('#alertBrowser').removeClass('d-none')
+    return
+  }
+
+  Sass.setWorkerUrl(`${window.location.origin}/dist/sass.worker.js`)
   createModal()
+
   const $btnSubmit = $('#btnSubmit')
-  const $alertBrowser = $('#alertBrowser')
   const $form = $('form')
   const $checkBoxRequirePopper = $('.require-popper')
   const $checkboxPopper = $('#checkboxPopper')
   const $chkMinify = $('#chkMinify')
+  const $chkCSS = $('#chkCSS')
   const popperCheckboxList = [].slice.call(document.querySelectorAll('.require-popper'))
-
-  if (!supportedBrowser) {
-    $alertBrowser.removeClass('d-none')
-    return
-  }
 
   $checkboxPopper.on('click', function () {
     chooseToImportPopper = this.checked
@@ -59,46 +55,13 @@ $(() => {
       return
     }
 
-    const minify = $chkMinify[0].checked
     showModal(() => {
-      const listOfRequest = [
-        axios.get(`${bsCDN}util.js`)
-      ]
+      const fileName = 'bootstrap.custom.zip'
+      const pluginList = formatList(formData.map((value) => ucfirst(value.name)))
 
-      const listPlugin = formatList(formData.map((value) => value.name))
-
-      // Add Popper.js if required
-      if ($checkboxPopper[0].checked) {
-        listOfRequest.push(
-          axios.get(popperCDN)
-        )
-      }
-
-      listPlugin.forEach(value => {
-        listOfRequest.push(
-          axios.get(`${bsCDN}${value}.js`)
-        )
-      })
-
-      if (minify) {
-        fileName = 'bootstrap.custom.min.js'
-      }
-
-      axios.all(listOfRequest)
-        .then((listOfFiles) => {
-          updateDialogStatus('Building your assets...')
-
-          delay(10, () => {
-            const fileContent = createFileContent(listOfFiles, minify)
-
-            delay(10, () => {
-              updateLink(fileName, generateLink(fileContent))
-            })
-          })
-        })
-        .catch((err) => {
-          hideModal()
-          throw new Error(err)
+      build(pluginList, $checkboxPopper[0].checked, $chkMinify[0].checked, $chkCSS[0].checked)
+        .then(url => {
+          updateLink(fileName, url)
         })
     })
   })

@@ -14,29 +14,29 @@
           <span class="bx bxl-github bx-sm d-block" aria-hidden="true"></span>
         </a>
       </div>
-    </header>
-    <div class="container flex-grow-1 flex-shrink-0">
-      <div class="row">
-        <div class="col-12 mt-3">
-          <h2 class="h4">Plugins</h2>
+		</header>
+		<div class="container flex-grow-1 flex-shrink-0">
+			<div class="row">
+        <div id="alertBrowser" class="alert alert-danger d-none" role="alert">
+          <p class="text-center">
+            Your browser is not up to date, please update your browser or try another one.
+            You can check this website to find a better one: <a href="https://browsehappy.com/">https://browsehappy.com</a>
+          </p>
         </div>
-        <div class="col-12 mt-3">
-          <div id="alertBrowser" class="alert alert-danger d-none" role="alert">
-            <p class="text-center">
-              Your browser is not up to date, please update your browser or try another one.
-              You can check this website to find a better one: <a href="https://browsehappy.com/">https://browsehappy.com</a>
-            </p>
-          </div>
-          <form>
-            <div class="row">
-              <div class="col-3">
-                <div class="custom-control custom-checkbox">
-                  <input class="custom-control-input" type="checkbox" id="chkAlert" name="alert">
-                  <label class="custom-control-label" for="chkAlert">
-                    Alert
-                  </label>
-                </div>
-              </div>
+				<div class="col-12 mt-3">
+					<h2 class="h4">Plugins</h2>
+				</div>
+				<div class="col-12 mt-3">
+					<form>
+						<div class="row">
+							<div class="col-3">
+								<div class="custom-control custom-checkbox">
+									<input class="custom-control-input" type="checkbox" id="chkAlert" name="alert">
+									<label class="custom-control-label" for="chkAlert">
+										Alert
+									</label>
+								</div>
+							</div>
 
               <div class="col-3">
                 <div class="custom-control custom-checkbox">
@@ -143,6 +143,15 @@
                 <input id="chkMinify" class="custom-control-input" type="checkbox">
                 <label class="custom-control-label" for="chkMinify">
                   Minify
+                </label>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="custom-control custom-checkbox">
+                <input id="chkCSS" class="custom-control-input" type="checkbox">
+                <label class="custom-control-label" for="chkCSS">
+                  Include CSS
                 </label>
               </div>
             </div>
