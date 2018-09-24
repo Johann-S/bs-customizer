@@ -11,10 +11,10 @@ const uglifyConfig = {
 }
 
 const createFileContent = (listOfFiles, minify) => {
-	let content = ''
+  let content = ''
 
-	listOfFiles.forEach((file) => {
-		content += file.data
+  listOfFiles.forEach((file) => {
+    content += file.data
   })
 
   if (minify) {
@@ -27,15 +27,15 @@ const createFileContent = (listOfFiles, minify) => {
     content = minifyResult.code
   }
 
-	return content
+  return content
 }
 
 const generateLink = (fileContent) => {
-	const fileData = new Blob([ fileContent ], {
-		type: 'text/javascript;charset=utf-8'
-	})
+  const fileData = new Blob([ fileContent ], {
+    type: 'text/javascript;charset=utf-8'
+  })
 
-	const downloadUrl = URL.createObjectURL(fileData, {
+  const downloadUrl = URL.createObjectURL(fileData, {
     type: 'application/javascript',
   })
 
@@ -43,6 +43,6 @@ const generateLink = (fileContent) => {
 }
 
 export {
-	createFileContent,
-	generateLink,
+  createFileContent,
+  generateLink,
 }

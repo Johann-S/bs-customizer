@@ -65,7 +65,7 @@ module.exports = (env, args) => {
           options: {
             name: 'svg/[name].[ext]'
           }
-			  }
+        }
       ]
     }
   }
