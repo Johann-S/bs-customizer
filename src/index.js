@@ -32,7 +32,6 @@ $(() => {
   const popperCheckboxList = [].slice.call(document.querySelectorAll('.require-popper'))
 
 	if (!supportedBrowser) {
-		$form.remove()
 		$alertBrowser.removeClass('d-none')
 		return
 	}
