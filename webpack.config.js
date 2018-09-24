@@ -26,8 +26,11 @@ module.exports = (env, args) => {
       new PurgecssPlugin({
         paths: glob.sync([
           paths.src,
-          paths.index
+          paths.index,
         ]),
+        whitelistPatterns: [
+          /^modal/,
+        ]
       }),
     ],
     module: {
