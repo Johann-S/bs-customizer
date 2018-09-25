@@ -2,7 +2,7 @@ import axios from 'axios'
 import JSZip from 'jszip'
 import Sass from 'sass.js/dist/sass'
 
-import { plugins } from './plugins'
+import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, createCssFileContent, generateLink } from './file-util'
 import { uniqArray } from './util'
 
@@ -14,10 +14,14 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
   let listScssRequest = []
 
   pluginList.forEach((plugin) => {
-    listJsRequest = listJsRequest.concat(plugins[plugin].js)
+    if (jsPlugins[plugin]) {
+      listJsRequest = listJsRequest.concat(jsPlugins[plugin].js)
 
-    if (includeCSS) {
-      listScssRequest = listScssRequest.concat(plugins[plugin].scss)
+      if (includeCSS) {
+        listScssRequest = listScssRequest.concat(jsPlugins[plugin].scss)
+      }
+    } else {
+      listScssRequest = listScssRequest.concat(scssPlugins[plugin])
     }
   })
 
@@ -39,9 +43,11 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
         const zip = new JSZip()
         const jsFileContent = createJsFileContent(jsFiles, minify)
 
-        zip.file(`${fileName}.js`, jsFileContent)
+        if (jsFileContent.length > 0) {
+          zip.file(`${fileName}.js`, jsFileContent)
+        }
 
-        if (includeCSS) {
+        if (listScssRequest.length > 0) {
           axios.all(listScssRequest)
             .then(scssFiles => {
               const sass = new Sass()
