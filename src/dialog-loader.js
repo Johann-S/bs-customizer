@@ -20,11 +20,11 @@ const template = `
       </div>
       <div class="modal-body text-center">
         <div id="loader">
-          <i class="bx bx-loader bx-spin bx-lg"></i>
+          <span class="bx bx-loader bx-spin bx-lg"></span>
         </div>
         <p id="loadingStatus" class="mt-3 mb-0"></p>
         <a id="generatedLink" class="btn btn-primary d-none">
-          <i class="bx bx-download"></i> Download
+          <span class="bx bx-download" aria-hidden="true"></span> Download
         </a>
       </div>
     </div>
