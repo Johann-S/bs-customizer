@@ -1,12 +1,20 @@
 import axios from 'axios'
 import JSZip from 'jszip'
 import Sass from 'sass.js/dist/sass'
+import CleanCSS from './lib/clean-css'
 
 import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, createCssFileContent, generateLink } from './file-util'
 import { uniqArray } from './util'
 
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
+
+const configCleanCSS = {
+  level: 1,
+  format: {
+    breakWith: 'lf',
+  },
+}
 
 const build = (pluginList, addPopper, minify, includeCSS) => {
   const fileName = !minify ? 'bootstrap.custom' : 'bootstrap.custom.min'
@@ -54,7 +62,12 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
 
               sass.compile(createCssFileContent(scssFiles), (result) => {
                 if (result.status === 0) {
-                  zip.file(`${fileName}.css`, result.text)
+                  let cssContent = result.text
+                  if (minify) {
+                    cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
+                  }
+
+                  zip.file(`${fileName}.css`, cssContent)
                   zip.generateAsync({ type: 'blob' })
                     .then(content => {
                       resolve(generateLink(content))
