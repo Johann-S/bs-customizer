@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import Sass from 'sass.js/dist/sass'
+import 'promise-polyfill/src/polyfill'
 
 import { build } from './build'
 import { formatList, ucfirst } from './util'
