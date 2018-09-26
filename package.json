@@ -34,6 +34,7 @@
     "boxicons": "^1.7.1",
     "jquery": "^3.3.1",
     "jszip": "^3.1.5",
+    "promise-polyfill": "^8.1.0",
     "sass.js": "^0.10.11",
     "uglifyjs-browser": "^3.0.0"
   }
