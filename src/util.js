@@ -46,15 +46,16 @@ const uniqArray = (array) => array.filter((elem, pos, arr) => arr.indexOf(elem) 
 
 const getSassWorkerPath = () => {
   const bsCustomizer = 'bs-customizer'
-  let origin = window.location.origin
+  const location = window.location
+  let origin = location.origin
 
-  if (!window.location.origin) {
-    const port = window.location.port ? ':' + window.location.port: ''
+  if (!origin) {
+    const port = location.port ? `:${location.port}` : ''
 
-    origin = `${window.location.protocol}//${window.location.hostname}${port}`
+    origin = `${location.protocol}//${location.hostname}${port}`
   }
 
-  const indexPath = window.location.pathname
+  const indexPath = location.pathname
     .split('/')
     .indexOf(bsCustomizer)
   

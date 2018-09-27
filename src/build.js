@@ -17,7 +17,7 @@ const configCleanCSS = {
 }
 
 const build = (pluginList, addPopper, minify, includeCSS) => {
-  const fileName = !minify ? 'bootstrap.custom' : 'bootstrap.custom.min'
+  const fileName = `bootstrap.custom${minify ? '.min' : ''}`
   let listJsRequest = []
   let listScssRequest = []
 
