@@ -1,9 +1,10 @@
 const path = require('path')
 const glob = require('glob-all')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let fileName = 'bs-customizer.min'
 const paths = {
@@ -19,6 +20,9 @@ module.exports = (env, args) => {
       path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+      new CopyWebpackPlugin([
+        'src/lib/sass.worker.js'
+      ]),
       new MiniCssExtractPlugin({
         filename: `${fileName}.css`,
         chunkFilename: '[id].css'
