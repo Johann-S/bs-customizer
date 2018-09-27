@@ -44,14 +44,23 @@ const ucfirst = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
 const uniqArray = (array) => array.filter((elem, pos, arr) => arr.indexOf(elem) === pos)
 
-const getLocationOrigin = () => {
+const getSassWorkerPath = () => {
+  const bsCustomizer = 'bs-customizer'
+  let origin = window.location.origin
+
   if (!window.location.origin) {
     const port = window.location.port ? ':' + window.location.port: ''
 
-    return `${window.location.protocol}//${window.location.hostname}${port}`
+    origin = `${window.location.protocol}//${window.location.hostname}${port}`
   }
 
-  return window.location.origin
+  const indexPath = window.location.pathname
+    .split('/')
+    .indexOf(bsCustomizer)
+  
+  const bsCustomizerPath = indexPath !== -1 ? `/${bsCustomizer}/` : '/'
+
+  return `${origin}${bsCustomizerPath}dist/sass.worker.js`
 }
 
 export {
@@ -59,5 +68,5 @@ export {
   formatScssList,
   ucfirst,
   uniqArray,
-  getLocationOrigin,
+  getSassWorkerPath,
 }
