@@ -41,6 +41,9 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
   }
 
   if (listScssRequest.length > 0) {
+    // Add reboot by default
+    listScssRequest = listScssRequest.concat(scssPlugins.Reboot)
+
     listScssRequest = uniqArray(listScssRequest)
     listScssRequest = formatScssList(listScssRequest)
       .map(url => axios.get(url))
