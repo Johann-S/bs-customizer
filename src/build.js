@@ -5,7 +5,7 @@ import CleanCSS from './lib/clean-css'
 
 import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, createCssFileContent, generateLink } from './file-util'
-import { uniqArray } from './util'
+import { formatScssList, uniqArray } from './util'
 
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
 
@@ -42,6 +42,7 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
 
   if (listScssRequest.length > 0) {
     listScssRequest = uniqArray(listScssRequest)
+    listScssRequest = formatScssList(listScssRequest)
       .map(url => axios.get(url))
   }
 
