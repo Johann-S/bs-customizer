@@ -1,3 +1,27 @@
 .no-underline {
   text-decoration: none !important;
 }
+
+.col-options {
+  right: 0;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .col-options {
+    position: relative !important;
+  }
+
+  .col-options.col-3 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 7px !important;
+  }
+
+  .col-9.col-plugins {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 7px !important;
+  }
+}
