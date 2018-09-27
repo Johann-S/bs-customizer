@@ -25,8 +25,19 @@ const ucfirst = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
 const uniqArray = (array) => array.filter((elem, pos, arr) => arr.indexOf(elem) === pos)
 
+const getLocationOrigin = () => {
+  if (!window.location.origin) {
+    const port = window.location.port ? ':' + window.location.port: ''
+
+    return `${window.location.protocol}//${window.location.hostname}${port}`
+  }
+
+  return window.location.origin
+}
+
 export {
   formatList,
   ucfirst,
   uniqArray,
+  getLocationOrigin,
 }

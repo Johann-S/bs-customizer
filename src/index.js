@@ -3,7 +3,7 @@ import Sass from 'sass.js/dist/sass'
 import 'promise-polyfill/src/polyfill'
 
 import { build } from './build'
-import { formatList, ucfirst } from './util'
+import { formatList, ucfirst, getLocationOrigin } from './util'
 import {
   createModal,
   showModal,
@@ -22,7 +22,7 @@ $(() => {
     return
   }
 
-  Sass.setWorkerUrl(`${window.location.origin}/dist/sass.worker.js`)
+  Sass.setWorkerUrl(`${getLocationOrigin()}/dist/sass.worker.js`)
   createModal()
 
   const $btnSubmit = $('#btnSubmit')
