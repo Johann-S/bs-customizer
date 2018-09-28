@@ -15,7 +15,7 @@
         </a>
       </div>
 		</header>
-		<div class="container flex-grow-1 flex-shrink-0">
+		<div class="container-fluid flex-grow-1 flex-shrink-0">
       <div id="alertBrowser" class="alert alert-danger d-none" role="alert">
         <p class="text-center">
           Your browser is not up to date, please update your browser or try another one.
@@ -23,464 +23,471 @@
         </p>
       </div>
       <form>
-        <div class="col-12 mt-3">
-          <h2 class="h4">JavaScript Plugins</h2>
-        </div>
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkAlert" name="alert">
-                <label class="custom-control-label" for="chkAlert">
-                  Alert
-                </label>
+        <div class="row">
+          <div class="col-9 col-plugins">
+            <div class="mt-3">
+              <h2 class="h4">JavaScript Plugins</h2>
+            </div>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkAlert" name="alert">
+                    <label class="custom-control-label" for="chkAlert">
+                      Alert
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkButton" name="button">
+                    <label class="custom-control-label" for="chkButton">
+                      Button
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkCarousel" name="carousel">
+                    <label class="custom-control-label" for="chkCarousel">
+                      Carousel
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkCollapse" name="collapse">
+                    <label class="custom-control-label" for="chkCollapse">
+                      Collapse
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input require-popper" type="checkbox" id="chkDropdown" name="dropdown">
+                    <label class="custom-control-label" for="chkDropdown">
+                      Dropdown
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkModal" name="modal">
+                    <label class="custom-control-label" for="chkModal">
+                      Modal
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input require-popper" type="checkbox" id="chkPopover" name="popover">
+                    <label class="custom-control-label" for="chkPopover">
+                      Popover
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkScrollspy" name="scrollspy">
+                    <label class="custom-control-label" for="chkScrollspy">
+                      ScrollSpy
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkTab" name="tab">
+                    <label class="custom-control-label" for="chkTab">
+                      Tab
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input require-popper" type="checkbox" id="chkTooltip" name="tooltip">
+                    <label class="custom-control-label" for="chkTooltip">
+                      Tooltip
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkButton" name="button">
-                <label class="custom-control-label" for="chkButton">
-                  Button
-                </label>
+            <div class="mt-3">
+              <h2 class="h4">Layout</h2>
+            </div>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkGrid" name="grid">
+                    <label class="custom-control-label" for="chkGrid">
+                      Grid
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkMedia" name="media">
+                    <label class="custom-control-label" for="chkMedia">
+                      Media
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkCarousel" name="carousel">
-                <label class="custom-control-label" for="chkCarousel">
-                  Carousel
-                </label>
+            <div class="mt-3">
+              <h2 class="h4">Content</h2>
+            </div>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkCode" name="code">
+                    <label class="custom-control-label" for="chkCode">
+                      Code
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkImg" name="images">
+                    <label class="custom-control-label" for="chkImg">
+                      Images / Figures
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkReboot" name="reboot">
+                    <label class="custom-control-label" for="chkReboot">
+                      Reboot
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkTables" name="tables">
+                    <label class="custom-control-label" for="chkTables">
+                      Tables
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkTypo" name="type">
+                    <label class="custom-control-label" for="chkTypo">
+                      Typography
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkCollapse" name="collapse">
-                <label class="custom-control-label" for="chkCollapse">
-                  Collapse
-                </label>
+            <div class="mt-3">
+              <h2 class="h4">Components</h2>
+            </div>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkBadge" name="badge">
+                    <label class="custom-control-label" for="chkBadge">
+                      Badge
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkBreadcrumb" name="breadcrumb">
+                    <label class="custom-control-label" for="chkBreadcrumb">
+                      Breadcrumb
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkBtnGroup" name="buttonGroup">
+                    <label class="custom-control-label" for="chkBtnGroup">
+                      Buttons and Button-group
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkCard" name="card">
+                    <label class="custom-control-label" for="chkCard">
+                      Card
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkForms" name="forms">
+                    <label class="custom-control-label" for="chkForms">
+                      Forms
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkInputGroup" name="inputGroup">
+                    <label class="custom-control-label" for="chkInputGroup">
+                      Input group
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkJumbo" name="jumbotron">
+                    <label class="custom-control-label" for="chkJumbo">
+                      Jumbotron
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkListGroup" name="listGroup">
+                    <label class="custom-control-label" for="chkListGroup">
+                      List group
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkNavs" name="navs">
+                    <label class="custom-control-label" for="chkNavs">
+                      Navs
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkNavbar" name="navbar">
+                    <label class="custom-control-label" for="chkNavbar">
+                      Navbar
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkPagination" name="pagination">
+                    <label class="custom-control-label" for="chkPagination">
+                      Pagination
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkProgress" name="progress">
+                    <label class="custom-control-label" for="chkProgress">
+                      Progress
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper" type="checkbox" id="chkDropdown" name="dropdown">
-                <label class="custom-control-label" for="chkDropdown">
-                  Dropdown
-                </label>
-              </div>
+            <div class="mt-3">
+              <h2 class="h4">Utilities</h2>
             </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkModal" name="modal">
-                <label class="custom-control-label" for="chkModal">
-                  Modal
-                </label>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkBorders" name="borders">
+                    <label class="custom-control-label" for="chkBorders">
+                      Borders
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkClearfix" name="clearfix">
+                    <label class="custom-control-label" for="chkClearfix">
+                      Clearfix
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkCloseIcon" name="closeIcon">
+                    <label class="custom-control-label" for="chkCloseIcon">
+                      Close icon
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkColors" name="colors">
+                    <label class="custom-control-label" for="chkColors">
+                      Colors
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper" type="checkbox" id="chkPopover" name="popover">
-                <label class="custom-control-label" for="chkPopover">
-                  Popover
-                </label>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkDisplay" name="display">
+                    <label class="custom-control-label" for="chkDisplay">
+                      Display
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkEmbed" name="embed">
+                    <label class="custom-control-label" for="chkEmbed">
+                      Embed
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkFlex" name="flex">
+                    <label class="custom-control-label" for="chkFlex">
+                      Flex
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkFloat" name="float">
+                    <label class="custom-control-label" for="chkFloat">
+                      Float
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkScrollspy" name="scrollspy">
-                <label class="custom-control-label" for="chkScrollspy">
-                  ScrollSpy
-                </label>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkPosition" name="position">
+                    <label class="custom-control-label" for="chkPosition">
+                      Position
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkScreen" name="screenreaders">
+                    <label class="custom-control-label" for="chkScreen">
+                      Screenreaders
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkShadows" name="shadows">
+                    <label class="custom-control-label" for="chkShadows">
+                      Shadows
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkSizing" name="sizing">
+                    <label class="custom-control-label" for="chkSizing">
+                      Sizing
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkTab" name="tab">
-                <label class="custom-control-label" for="chkTab">
-                  Tab
-                </label>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper" type="checkbox" id="chkTooltip" name="tooltip">
-                <label class="custom-control-label" for="chkTooltip">
-                  Tooltip
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 mt-3">
-          <h2 class="h4">Layout</h2>
-        </div>
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkGrid" name="grid">
-                <label class="custom-control-label" for="chkGrid">
-                  Grid
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkMedia" name="media">
-                <label class="custom-control-label" for="chkMedia">
-                  Media
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mt-3">
-          <h2 class="h4">Content</h2>
-        </div>
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkCode" name="code">
-                <label class="custom-control-label" for="chkCode">
-                  Code
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkImg" name="images">
-                <label class="custom-control-label" for="chkImg">
-                  Images / Figures
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkReboot" name="reboot">
-                <label class="custom-control-label" for="chkReboot">
-                  Reboot
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkTables" name="tables">
-                <label class="custom-control-label" for="chkTables">
-                  Tables
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkTypo" name="type">
-                <label class="custom-control-label" for="chkTypo">
-                  Typography
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mt-3">
-          <h2 class="h4">Components</h2>
-        </div>
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkBadge" name="badge">
-                <label class="custom-control-label" for="chkBadge">
-                  Badge
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkBreadcrumb" name="breadcrumb">
-                <label class="custom-control-label" for="chkBreadcrumb">
-                  Breadcrumb
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkBtnGroup" name="buttonGroup">
-                <label class="custom-control-label" for="chkBtnGroup">
-                  Buttons and Button-group
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkCard" name="card">
-                <label class="custom-control-label" for="chkCard">
-                  Card
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkForms" name="forms">
-                <label class="custom-control-label" for="chkForms">
-                  Forms
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkInputGroup" name="inputGroup">
-                <label class="custom-control-label" for="chkInputGroup">
-                  Input group
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkJumbo" name="jumbotron">
-                <label class="custom-control-label" for="chkJumbo">
-                  Jumbotron
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkListGroup" name="listGroup">
-                <label class="custom-control-label" for="chkListGroup">
-                  List group
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkNavs" name="navs">
-                <label class="custom-control-label" for="chkNavs">
-                  Navs
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkNavbar" name="navbar">
-                <label class="custom-control-label" for="chkNavbar">
-                  Navbar
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkPagination" name="pagination">
-                <label class="custom-control-label" for="chkPagination">
-                  Pagination
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkProgress" name="progress">
-                <label class="custom-control-label" for="chkProgress">
-                  Progress
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mt-3">
-          <h2 class="h4">Utilities</h2>
-        </div>
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkBorders" name="borders">
-                <label class="custom-control-label" for="chkBorders">
-                  Borders
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkClearfix" name="clearfix">
-                <label class="custom-control-label" for="chkClearfix">
-                  Clearfix
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkCloseIcon" name="closeIcon">
-                <label class="custom-control-label" for="chkCloseIcon">
-                  Close icon
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkColors" name="colors">
-                <label class="custom-control-label" for="chkColors">
-                  Colors
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkDisplay" name="display">
-                <label class="custom-control-label" for="chkDisplay">
-                  Display
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkEmbed" name="embed">
-                <label class="custom-control-label" for="chkEmbed">
-                  Embed
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkFlex" name="flex">
-                <label class="custom-control-label" for="chkFlex">
-                  Flex
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkFloat" name="float">
-                <label class="custom-control-label" for="chkFloat">
-                  Float
-                </label>
+              <div class="row mt-3">
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkSpacing" name="spacing">
+                    <label class="custom-control-label" for="chkSpacing">
+                      Spacing
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkText" name="text">
+                    <label class="custom-control-label" for="chkText">
+                      Text
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkVerticalAlign" name="verticalAlign">
+                    <label class="custom-control-label" for="chkVerticalAlign">
+                      Vertical align
+                    </label>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chkVisibility" name="visibility">
+                    <label class="custom-control-label" for="chkVisibility">
+                      Visibility
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkPosition" name="position">
-                <label class="custom-control-label" for="chkPosition">
-                  Position
-                </label>
+          <div class="col-options col-3 pl-0 position-fixed">
+            <div class="mt-3">
+              <h2 class="h4">Options</h2>
+            </div>
+            <div class="mt-3">
+              <div class="row">
+                <div class="col-6">
+                  <div class="custom-control custom-checkbox">
+                    <input id="checkboxPopper" class="custom-control-input" type="checkbox">
+                    <label class="custom-control-label" for="checkboxPopper">
+                      Include Popper.js
+                    </label>
+                  </div>
+                </div>
+      
+                <div class="col-6">
+                  <div class="custom-control custom-checkbox">
+                    <input id="chkMinify" class="custom-control-input" type="checkbox" checked>
+                    <label class="custom-control-label" for="chkMinify">
+                      Minify
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="custom-control custom-checkbox">
+                    <input id="chkCSS" class="custom-control-input" type="checkbox">
+                    <label class="custom-control-label" for="chkCSS">
+                      Include JavaScript plugin CSS
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkScreen" name="screenreaders">
-                <label class="custom-control-label" for="chkScreen">
-                  Screenreaders
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkShadows" name="shadows">
-                <label class="custom-control-label" for="chkShadows">
-                  Shadows
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkSizing" name="sizing">
-                <label class="custom-control-label" for="chkSizing">
-                  Sizing
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkSpacing" name="spacing">
-                <label class="custom-control-label" for="chkSpacing">
-                  Spacing
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkText" name="text">
-                <label class="custom-control-label" for="chkText">
-                  Text
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkVerticalAlign" name="verticalAlign">
-                <label class="custom-control-label" for="chkVerticalAlign">
-                  Vertical align
-                </label>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="custom-control custom-checkbox">
-                <input class="custom-control-input" type="checkbox" id="chkVisibility" name="visibility">
-                <label class="custom-control-label" for="chkVisibility">
-                  Visibility
-                </label>
-              </div>
+            <div>
+              <button id="btnSubmit" type="button" class="btn btn-primary mt-3">
+                <span class="bx bx-cog" aria-hidden="true"></span> Build
+              </button>
             </div>
           </div>
         </div>
       </form>
-      <div class="col-12 mt-3">
-        <h2 class="h4">Options</h2>
-      </div>
-      <div class="col-12 mt-3">
-        <div class="row">
-          <div class="col-3">
-            <div class="custom-control custom-checkbox">
-              <input id="checkboxPopper" class="custom-control-input" type="checkbox">
-              <label class="custom-control-label" for="checkboxPopper">
-                Include Popper.js
-              </label>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="custom-control custom-checkbox">
-              <input id="chkMinify" class="custom-control-input" type="checkbox" checked>
-              <label class="custom-control-label" for="chkMinify">
-                Minify
-              </label>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="custom-control custom-checkbox">
-              <input id="chkCSS" class="custom-control-input" type="checkbox">
-              <label class="custom-control-label" for="chkCSS">
-                Include JavaScript plugin CSS
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <button id="btnSubmit" type="button" class="btn btn-primary mt-3">
-          <span class="bx bx-cog" aria-hidden="true"></span> Build
-        </button>
-      </div>
     </div>
     <footer class="bg-light p-3 mt-4">
       <div class="container">
