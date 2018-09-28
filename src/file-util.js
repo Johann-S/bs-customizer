@@ -13,7 +13,7 @@ const uglifyConfig = {
 const concatFileData = (files) => {
   let content = ''
 
-  files.forEach((file) => {
+  files.forEach(file => {
     content += file.data
   })
 
@@ -36,11 +36,11 @@ const createJsFileContent = (jsFiles, minify) => {
   return content
 }
 
-const createCssFileContent = (scssFiles) => {
+const createCssFileContent = scssFiles => {
   return concatFileData(scssFiles)
 }
 
-const generateLink = (fileContent) => {
+const generateLink = fileContent => {
   const downloadUrl = URL.createObjectURL(fileContent, {
     type: 'application/zip',
   })
