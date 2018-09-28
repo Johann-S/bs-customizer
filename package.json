@@ -6,7 +6,8 @@
   "scripts": {
     "deploy": "gh-pages --dist ./ --src \"{index.html,dist/**}\"",
     "dev": "webpack-dev-server --open --mode=development --config webpack.config.js",
-    "prod": "webpack --mode=production --config webpack.config.js"
+    "prod": "webpack --mode=production --config webpack.config.js",
+    "test": "npm run prod"
   },
   "keywords": [
     "customizer",
