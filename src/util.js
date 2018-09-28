@@ -21,25 +21,6 @@ const formatList = (list) => {
   return listPlugin
 }
 
-const formatScssList = (scssList) => {
-  const rootIndex = scssList.indexOf('_root')
-  const rebootIndex = scssList.indexOf('_reboot')
-
-  if (rootIndex !== -1 && rootIndex !== 0) {
-    const rootUrl = scssList[rootIndex]
-    scssList.splice(rootIndex, 1)
-    scssList.unshift(rootUrl)
-  }
-
-  if (rebootIndex !== -1 && rebootIndex !== 1) {
-    const rebootUrl = scssList[rebootIndex]
-    scssList.splice(rebootIndex, 1)
-    scssList.splice(1, 0, rebootUrl)
-  }
-
-  return scssList
-}
-
 const ucfirst = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
 const uniqArray = (array) => array.filter((elem, pos, arr) => arr.indexOf(elem) === pos)

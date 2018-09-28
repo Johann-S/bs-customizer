@@ -1,3 +1,15 @@
+// Temporary fix from: https://github.com/medialize/sass.js/issues/96#issuecomment-424386171
+if (!self.crypto) {
+  self.crypto = {
+    getRandomValues: function(array) {
+      for (var i = 0, l = array.length; i < l; i++) {
+        array[i] = Math.floor(Math.random() * 256);
+      }
+      return array;
+    }
+  };
+}
+
 /*! sass.js - v0.10.11 (f4b79a1) - built 2018-09-22
   providing libsass 3.5.4 (1e52b743)
   via emscripten 1.38.12 ()
