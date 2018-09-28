@@ -8,6 +8,7 @@ A simple customizer which allows you to build a custom version of [Bootstrap](ht
 Features:
 
 - Select which plugins you want to use
+- Build a custom Bootstrap CSS version
 - Choose to include Popper.js or not
 - Minify your custom version
 
@@ -24,6 +25,12 @@ To contribute :
  - Commit and open a pull request
 
  Thank you !
+
+## Testing our last changes
+
+If you want to test our last changes (pushed in our `master` branch) you'll see them here: [https://dreamy-montalcini-8976b2.netlify.com/](https://dreamy-montalcini-8976b2.netlify.com/)
+
+Our production branch is `gh-pages` and that's what you can see in [https://johann-s.github.io/bs-customizer/](https://johann-s.github.io/bs-customizer/).
 
 ## Support me
 
