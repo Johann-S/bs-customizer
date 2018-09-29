@@ -13,29 +13,30 @@ Features:
 - Choose to include Popper.js or not
 - Minify your custom version
 
-You can use it [here](https://johann-s.github.io/bs-customizer/)
+You can use it [here](https://johann-s.github.io/bs-customizer/).
 
 ## Contributing
 
 You're more than welcome to contribute to our project :heart:
 
-To contribute :
- - Please do not **build** our dist files it will update the current website
- - Edit files in `src/`
- - Test your changes by running : `npm run dev` and open http://localhost:8080
- - Commit and open a pull request
+To contribute:
 
- Thank you !
+- Please do not **build** our dist files it will update the current website
+- Edit files in `src/`
+- Test your changes by running `npm run dev` and opening `http://localhost:8080`
+- Commit and open a pull request
 
-## Testing our last changes
+Thank you!
 
-If you want to test our last changes (pushed in our `master` branch) you'll see them here: [https://dreamy-montalcini-8976b2.netlify.com/](https://dreamy-montalcini-8976b2.netlify.com/)
+## Testing our latest changes
 
-Our production branch is `gh-pages` and that's what you can see in [https://johann-s.github.io/bs-customizer/](https://johann-s.github.io/bs-customizer/).
+If you want to try out our latest changes (pushed in our `master` branch) you can see them in <https://bs-customizer.netlify.com/>.
+
+Our production branch is the `gh-pages` branch which can be seen on <https://johann-s.github.io/bs-customizer/>.
 
 ## Support me
 
-If you want to thank me, you can support me and become my [Patron](https://www.patreon.com/jservoire)
+If you want to thank me, you can support me and become my [Patron](https://www.patreon.com/jservoire).
 
 ## License
 
