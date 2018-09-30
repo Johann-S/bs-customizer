@@ -27,15 +27,6 @@ module.exports = (env, args) => {
         filename: `${fileName}.css`,
         chunkFilename: '[id].css'
       }),
-      new PurgecssPlugin({
-        paths: glob.sync([
-          paths.src,
-          paths.index,
-        ]),
-        whitelistPatterns: [
-          /^modal/,
-        ]
-      }),
     ],
     module: {
       rules: [
@@ -87,6 +78,18 @@ module.exports = (env, args) => {
         new OptimizeCSSAssetsPlugin({})
       ]
     }
+
+    conf.plugins.push(
+      new PurgecssPlugin({
+        paths: glob.sync([
+          paths.src,
+          paths.index,
+        ]),
+        whitelistPatterns: [
+          /^modal/,
+        ]
+      }),
+    )
   } else {
     conf.devtool = 'source-map'
     conf.devServer = {
