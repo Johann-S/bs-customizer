@@ -4,15 +4,15 @@ import Sass from 'sass.js/dist/sass'
 import CleanCSS from './lib/clean-css'
 
 import { jsPlugins, scssPlugins } from './plugins'
-import { createJsFileContent, createCssFileContent, generateLink } from './file-util'
+import { createJsFileContent, generateLink } from './file-util'
 import { formatScssList, uniqArray } from './util'
 
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
 const configCleanCSS = {
   level: 1,
   format: {
-    breakWith: 'lf',
-  },
+    breakWith: 'lf'
+  }
 }
 
 const buildJavaScript = (files, minify) => {
@@ -24,7 +24,7 @@ const buildJavaScript = (files, minify) => {
         )
       })
       .catch(() => {
-        reject('An error occured during building JS files')
+        reject(new Error('An error occured during building JS files'))
       })
   })
 }
@@ -131,13 +131,13 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
         }
 
         zip.generateAsync({ type: 'blob' })
-        .then(content => {
-          resolve(generateLink(content))
-        })
+          .then(content => {
+            resolve(generateLink(content))
+          })
       })
   })
 }
 
 export {
-  build,
+  build
 }

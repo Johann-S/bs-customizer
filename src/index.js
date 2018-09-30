@@ -13,7 +13,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
 
-const supportedBrowser = !!new Blob
+const supportedBrowser = typeof window.Blob !== 'undefined'
 let chooseToImportPopper = true
 
 $(() => {
