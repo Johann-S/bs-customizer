@@ -50,7 +50,9 @@ $(() => {
     }
   })
 
-  $btnSubmit.on('click', function () {
+  $btnSubmit.on('click', function (event) {
+    event.preventDefault()
+
     const formData = $form.serializeArray()
     if (formData.length === 0) {
       return
