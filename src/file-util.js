@@ -2,12 +2,12 @@ import uglify from 'uglifyjs-browser'
 
 const uglifyConfig = {
   compress: {
-    typeofs: false,
+    typeofs: false
   },
   mangle: true,
   output: {
-    comments: /^!/,
-  },
+    comments: /^!/
+  }
 }
 
 const concatFileData = (files) => {
@@ -42,7 +42,7 @@ const createCssFileContent = scssFiles => {
 
 const generateLink = fileContent => {
   const downloadUrl = URL.createObjectURL(fileContent, {
-    type: 'application/zip',
+    type: 'application/zip'
   })
 
   return downloadUrl
@@ -51,5 +51,5 @@ const generateLink = fileContent => {
 export {
   createJsFileContent,
   createCssFileContent,
-  generateLink,
+  generateLink
 }

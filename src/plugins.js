@@ -5,7 +5,7 @@ const jsPlugins = {
   Alert: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}alert.js`,
+      `${bsJsCDN}alert.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -16,12 +16,12 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_transition.scss`,
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_transitions.scss`,
-      `${bsScssCDN}_alert.scss`,
-    ],
+      `${bsScssCDN}_alert.scss`
+    ]
   },
   Button: {
     js: [
-      `${bsJsCDN}button.js`,
+      `${bsJsCDN}button.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -35,13 +35,13 @@ const jsPlugins = {
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_buttons.scss`,
       `${bsScssCDN}_button-group.scss`,
-      `${bsScssCDN}_close.scss`,
-    ],
+      `${bsScssCDN}_close.scss`
+    ]
   },
   Carousel: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}carousel.js`,
+      `${bsJsCDN}carousel.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -52,26 +52,26 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_transition.scss`,
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_card.scss`,
-      `${bsScssCDN}_carousel.scss`,
-    ],
+      `${bsScssCDN}_carousel.scss`
+    ]
   },
   Collapse: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}collapse.js`,
+      `${bsJsCDN}collapse.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
       `${bsScssCDN}_variables.scss`,
       `${bsScssCDN}mixins/_transition.scss`,
       `${bsScssCDN}_root.scss`,
-      `${bsScssCDN}_transitions.scss`,
-    ],
+      `${bsScssCDN}_transitions.scss`
+    ]
   },
   Dropdown: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}dropdown.js`,
+      `${bsJsCDN}dropdown.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -83,13 +83,13 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_hover.scss`,
       `${bsScssCDN}mixins/_gradients.scss`,
       `${bsScssCDN}_root.scss`,
-      `${bsScssCDN}_dropdown.scss`,
-    ],
+      `${bsScssCDN}_dropdown.scss`
+    ]
   },
   Modal: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}modal.js`,
+      `${bsJsCDN}modal.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -100,13 +100,13 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_transition.scss`,
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_transitions.scss`,
-      `${bsScssCDN}_modal.scss`,
-    ],
+      `${bsScssCDN}_modal.scss`
+    ]
   },
   Popover: {
     js: [
       `${bsJsCDN}tooltip.js`,
-      `${bsJsCDN}popover.js`,
+      `${bsJsCDN}popover.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -115,13 +115,13 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_box-shadow.scss`,
       `${bsScssCDN}mixins/_reset-text.scss`,
       `${bsScssCDN}_root.scss`,
-      `${bsScssCDN}_popover.scss`,
-    ],
+      `${bsScssCDN}_popover.scss`
+    ]
   },
   Scrollspy: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}scrollspy.js`,
+      `${bsJsCDN}scrollspy.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -131,13 +131,13 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_hover.scss`,
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_nav.scss`,
-      `${bsScssCDN}_navbar.scss`,
-    ],
+      `${bsScssCDN}_navbar.scss`
+    ]
   },
   Tab: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}tab.js`,
+      `${bsJsCDN}tab.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -151,13 +151,13 @@ const jsPlugins = {
       `${bsScssCDN}_nav.scss`,
       `${bsScssCDN}_navbar.scss`,
       `${bsScssCDN}_list-group.scss`,
-      `${bsScssCDN}_transitions.scss`,
-    ],
+      `${bsScssCDN}_transitions.scss`
+    ]
   },
   Tooltip: {
     js: [
       `${bsJsCDN}util.js`,
-      `${bsJsCDN}tooltip.js`,
+      `${bsJsCDN}tooltip.js`
     ],
     scss: [
       `${bsScssCDN}_functions.scss`,
@@ -167,9 +167,9 @@ const jsPlugins = {
       `${bsScssCDN}mixins/_transition.scss`,
       `${bsScssCDN}_root.scss`,
       `${bsScssCDN}_transitions.scss`,
-      `${bsScssCDN}_tooltip.scss`,
-    ],
-  },
+      `${bsScssCDN}_tooltip.scss`
+    ]
+  }
 }
 
 const scssPlugins = {
@@ -180,20 +180,20 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_badge.scss`,
+    `${bsScssCDN}_badge.scss`
   ],
   Borders: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}utilities/_borders.scss`,
+    `${bsScssCDN}utilities/_borders.scss`
   ],
   Breadcrumb: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_breadcrumb.scss`,
+    `${bsScssCDN}_breadcrumb.scss`
   ],
   ButtonGroup: jsPlugins.Button.scss,
   Card: [
@@ -203,21 +203,21 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_card.scss`,
+    `${bsScssCDN}_card.scss`
   ],
   Clearfix: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_clearfix.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}utilities/_clearfix.scss`,
+    `${bsScssCDN}utilities/_clearfix.scss`
   ],
   CloseIcon: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_close.scss`,    
+    `${bsScssCDN}_close.scss`
   ],
   Code: [
     `${bsScssCDN}_functions.scss`,
@@ -225,7 +225,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_box-shadow.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_code.scss`,
+    `${bsScssCDN}_code.scss`
   ],
   Colors: [
     `${bsScssCDN}_functions.scss`,
@@ -238,30 +238,30 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_text-truncate.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}utilities/_text.scss`,
-    `${bsScssCDN}utilities/_background.scss`,
+    `${bsScssCDN}utilities/_background.scss`
   ],
   Display: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}utilities/_display.scss`,
+    `${bsScssCDN}utilities/_display.scss`
   ],
   Embed: [
-    `${bsScssCDN}utilities/_embed.scss`,    
+    `${bsScssCDN}utilities/_embed.scss`
   ],
   Flex: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
-    `${bsScssCDN}utilities/_flex.scss`,
+    `${bsScssCDN}utilities/_flex.scss`
   ],
   Float: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}mixins/_float.scss`,
-    `${bsScssCDN}utilities/_float.scss`,
+    `${bsScssCDN}utilities/_float.scss`
   ],
   Forms: [
     `${bsScssCDN}_functions.scss`,
@@ -274,7 +274,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_transition.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}_custom-forms.scss`,
-    `${bsScssCDN}_forms.scss`,
+    `${bsScssCDN}_forms.scss`
   ],
   Grid: [
     `${bsScssCDN}_functions.scss`,
@@ -282,7 +282,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}mixins/_grid-framework.scss`,
     `${bsScssCDN}mixins/_grid.scss`,
-    `${bsScssCDN}_grid.scss`,
+    `${bsScssCDN}_grid.scss`
   ],
   Images: [
     `${bsScssCDN}_functions.scss`,
@@ -291,14 +291,14 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_box-shadow.scss`,
     `${bsScssCDN}mixins/_image.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_images.scss`,
+    `${bsScssCDN}_images.scss`
   ],
   InputGroup: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_input-group.scss`,
+    `${bsScssCDN}_input-group.scss`
   ],
   Jumbotron: [
     `${bsScssCDN}_functions.scss`,
@@ -306,7 +306,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_jumbotron.scss`,
+    `${bsScssCDN}_jumbotron.scss`
   ],
   ListGroup: [
     `${bsScssCDN}_functions.scss`,
@@ -315,10 +315,10 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}mixins/_list-group.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_list-group.scss`,
+    `${bsScssCDN}_list-group.scss`
   ],
   Media: [
-    `${bsScssCDN}_media.scss`,
+    `${bsScssCDN}_media.scss`
   ],
   Navs: [
     `${bsScssCDN}_functions.scss`,
@@ -326,7 +326,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_nav.scss`,
+    `${bsScssCDN}_nav.scss`
   ],
   Navbar: [
     `${bsScssCDN}_functions.scss`,
@@ -335,7 +335,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_navbar.scss`,
+    `${bsScssCDN}_navbar.scss`
   ],
   Pagination: [
     `${bsScssCDN}_functions.scss`,
@@ -344,12 +344,12 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_lists.scss`,
     `${bsScssCDN}mixins/_pagination.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_pagination.scss`,
+    `${bsScssCDN}_pagination.scss`
   ],
   Position: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
-    `${bsScssCDN}utilities/_position.scss`,
+    `${bsScssCDN}utilities/_position.scss`
   ],
   Progress: [
     `${bsScssCDN}_functions.scss`,
@@ -359,34 +359,34 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_gradients.scss`,
     `${bsScssCDN}mixins/_transition.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_progress.scss`,
+    `${bsScssCDN}_progress.scss`
   ],
   Reboot: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_reboot.scss`,    
+    `${bsScssCDN}_reboot.scss`
   ],
   Screenreaders: [
     `${bsScssCDN}mixins/_screen-reader.scss`,
-    `${bsScssCDN}utilities/_screenreaders.scss`,
+    `${bsScssCDN}utilities/_screenreaders.scss`
   ],
   Shadows: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
-    `${bsScssCDN}utilities/_shadows.scss`,
+    `${bsScssCDN}utilities/_shadows.scss`
   ],
   Sizing: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
-    `${bsScssCDN}utilities/_sizing.scss`,
+    `${bsScssCDN}utilities/_sizing.scss`
   ],
   Spacing: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
-    `${bsScssCDN}utilities/_spacing.scss`,    
+    `${bsScssCDN}utilities/_spacing.scss`
   ],
   Tables: [
     `${bsScssCDN}_functions.scss`,
@@ -395,7 +395,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}mixins/_table-row.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_tables.scss`,
+    `${bsScssCDN}_tables.scss`
   ],
   Text: [
     `${bsScssCDN}_functions.scss`,
@@ -406,25 +406,25 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_text-hide.scss`,
     `${bsScssCDN}mixins/_text-truncate.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}utilities/_text.scss`,
+    `${bsScssCDN}utilities/_text.scss`
   ],
   Type: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_lists.scss`,
     `${bsScssCDN}_root.scss`,
-    `${bsScssCDN}_type.scss`,
+    `${bsScssCDN}_type.scss`
   ],
   VerticalAlign: [
-    `${bsScssCDN}utilities/_align.scss`,
+    `${bsScssCDN}utilities/_align.scss`
   ],
   Visibility: [
     `${bsScssCDN}mixins/_visibility.scss`,
-    `${bsScssCDN}utilities/_visibility.scss`,
-  ],
+    `${bsScssCDN}utilities/_visibility.scss`
+  ]
 }
 
 export {
   jsPlugins,
-  scssPlugins,
+  scssPlugins
 }

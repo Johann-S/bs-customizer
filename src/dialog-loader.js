@@ -80,5 +80,5 @@ export {
   createModal,
   showModal,
   hideModal,
-  updateLink,
+  updateLink
 }

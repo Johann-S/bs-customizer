@@ -13,9 +13,9 @@ const formatList = list => {
   if (
     (popoverIndex !== -1 && tooltipIndex !== -1) &&
     popoverIndex < tooltipIndex
-    ) {
-      listPlugin.splice(tooltipIndex, 1)
-      listPlugin.splice(popoverIndex, 0, 'tooltip')
+  ) {
+    listPlugin.splice(tooltipIndex, 1)
+    listPlugin.splice(popoverIndex, 0, 'tooltip')
   }
 
   return listPlugin
@@ -74,7 +74,7 @@ const formatScssList = list => {
     'modal',
     'tooltip',
     'popover',
-    'carousel',
+    'carousel'
   ]
 
   plugins.forEach(item => {
@@ -82,7 +82,7 @@ const formatScssList = list => {
     if (item === 'forms') {
       index = list.findIndex(file => file.indexOf(item) !== -1 && file.indexOf('custom') === -1)
     } else if (item === 'nav') {
-      index = list.findIndex(file => file.indexOf(item) !== -1 && file.indexOf('navbar') === -1)      
+      index = list.findIndex(file => file.indexOf(item) !== -1 && file.indexOf('navbar') === -1)
     } else {
       index = list.findIndex(file => file.indexOf(item) !== -1)
     }
@@ -126,7 +126,7 @@ const getSassWorkerPath = () => {
   const indexPath = location.pathname
     .split('/')
     .indexOf(bsCustomizer)
-  
+
   const bsCustomizerPath = indexPath !== -1 ? `/${bsCustomizer}/` : '/'
 
   return `${origin}${bsCustomizerPath}dist/sass.worker.js`
@@ -137,5 +137,5 @@ export {
   formatScssList,
   ucfirst,
   uniqArray,
-  getSassWorkerPath,
+  getSassWorkerPath
 }

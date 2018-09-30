@@ -26,7 +26,7 @@ module.exports = (env, args) => {
       new MiniCssExtractPlugin({
         filename: `${fileName}.css`,
         chunkFilename: '[id].css'
-      }),
+      })
     ],
     module: {
       rules: [
@@ -83,12 +83,12 @@ module.exports = (env, args) => {
       new PurgecssPlugin({
         paths: glob.sync([
           paths.src,
-          paths.index,
+          paths.index
         ]),
         whitelistPatterns: [
-          /^modal/,
+          /^modal/
         ]
-      }),
+      })
     )
   } else {
     conf.devtool = 'source-map'
