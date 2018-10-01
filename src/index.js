@@ -3,7 +3,7 @@ import Sass from 'sass.js/dist/sass'
 import 'promise-polyfill/src/polyfill'
 
 import { build } from './build'
-import { formatList, ucfirst, getSassWorkerPath } from './util'
+import { formatList, ucfirst, getSassWorkerPath, supportedBrowsers } from './util'
 import {
   createModal,
   showModal,
@@ -13,11 +13,10 @@ import {
 import 'bootstrap/dist/css/bootstrap.css'
 import './main.css'
 
-const supportedBrowser = typeof window.Blob !== 'undefined'
 let chooseToImportPopper = true
 
 $(() => {
-  if (!supportedBrowser) {
+  if (!supportedBrowsers()) {
     $('#alertBrowser').removeClass('d-none')
     return
   }
