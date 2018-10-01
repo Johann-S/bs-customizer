@@ -1,9 +1,8 @@
 import $ from 'jquery'
 import Sass from 'sass.js/dist/sass'
-import 'promise-polyfill/src/polyfill'
 
 import { build } from './build'
-import { formatList, ucfirst, getSassWorkerPath, supportedBrowsers } from './util'
+import { formatList, ucfirst, getSassWorkerPath, supportedBrowser } from './util'
 import {
   createModal,
   showModal,
@@ -16,7 +15,7 @@ import './main.css'
 let chooseToImportPopper = true
 
 $(() => {
-  if (!supportedBrowsers()) {
+  if (!supportedBrowser()) {
     $('#alertBrowser').removeClass('d-none')
     return
   }
