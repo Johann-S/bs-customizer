@@ -23,7 +23,6 @@ $(() => {
   Sass.setWorkerUrl(getSassWorkerPath())
   createModal()
 
-  const $btnSubmit = $('#btnSubmit')
   const $form = $('form')
   const $checkBoxRequirePopper = $('.require-popper')
   const $checkboxPopper = $('#checkboxPopper')
@@ -48,7 +47,7 @@ $(() => {
     }
   })
 
-  $btnSubmit.on('click', function (event) {
+  $form.on('submit', function (event) {
     event.preventDefault()
 
     const formData = $form.serializeArray()
