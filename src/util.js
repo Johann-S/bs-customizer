@@ -132,11 +132,12 @@ const getSassWorkerPath = () => {
   return `${origin}${bsCustomizerPath}dist/sass.worker.js`
 }
 
-const supportedBrowsers = () => {
+const supportedBrowser = () => {
   const supportBlob = 'Blob' in window
+  const supportPromise = 'Promise' in window
   const supportArrayFindIndex = Boolean(Array.prototype.findIndex)
 
-  return supportBlob && supportArrayFindIndex
+  return supportBlob && supportArrayFindIndex && supportPromise
 }
 
 export {
@@ -145,5 +146,5 @@ export {
   ucfirst,
   uniqArray,
   getSassWorkerPath,
-  supportedBrowsers
+  supportedBrowser
 }
