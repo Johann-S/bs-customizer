@@ -8,6 +8,7 @@ import {
   showModal,
   updateLink
 } from './dialog-loader'
+import './toggler'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../css/main.css'
@@ -24,7 +25,7 @@ $(() => {
   createModal()
 
   const $form = $('form')
-  const $checkBoxRequirePopper = $('.require-popper')
+  const $checkBoxRequirePopper = $(document.querySelector('.require-popper'))
   const $checkboxPopper = $('#checkboxPopper')
   const $chkMinify = $('#chkMinify')
   const $chkCSS = $('#chkCSS')
