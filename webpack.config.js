@@ -14,6 +14,43 @@ const paths = {
   index: `${path.join(__dirname, 'src/')}*.html`
 }
 
+const uglifyJsConfig = {
+  compress: {
+    typeofs: false
+  },
+  mangle: true,
+  output: {
+    comments: /^!|@preserve|@license|@cc_on/i
+  }
+}
+
+const htmlminifierOpts = {
+  collapseBooleanAttributes: true,
+  collapseWhitespace: true,
+  conservativeCollapse: false,
+  decodeEntities: true,
+  minifyCSS: {
+    level: {
+      1: {
+        specialComments: 0
+      }
+    }
+  },
+  minifyJS: uglifyJsConfig,
+  minifyURLs: false,
+  processConditionalComments: true,
+  removeAttributeQuotes: true,
+  removeComments: true,
+  removeOptionalAttributes: true,
+  removeOptionalTags: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  removeTagWhitespace: false, // this leads to invalid HTML
+  sortAttributes: true,
+  sortClassName: true
+}
+
 module.exports = (env, args) => {
   const isProd = args.mode === 'production'
 
@@ -34,12 +71,7 @@ module.exports = (env, args) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
         filename: path.resolve(__dirname, 'index.html'),
-        minify: isProd ? {
-          removeComments: false,
-          collapseWhitespace: true,
-          conservativeCollapse: true,
-          preserveLineBreaks: true
-        } : undefined
+        minify: isProd ? htmlminifierOpts : false
       }),
       new WriteFilePlugin()
     ],
