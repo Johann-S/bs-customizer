@@ -10,7 +10,7 @@ import {
 } from './dialog-loader'
 
 import 'bootstrap/dist/css/bootstrap.css'
-import './main.css'
+import '../css/main.css'
 
 let chooseToImportPopper = true
 
