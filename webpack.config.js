@@ -8,11 +8,24 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const CleanCSS = require('clean-css')
 
 let fileName = 'bs-customizer.min'
 const paths = {
   src: `${path.join(__dirname, 'src/js/')}*.js`,
   index: `${path.join(__dirname, 'src/')}*.html`
+}
+
+const cleanCssConfig = {
+  level: {
+    1: {
+      specialComments: 'all'
+    }
+  },
+  format: {
+    breakWith: 'lf'
+  },
+  returnPromise: true
 }
 
 const uglifyJsConfig = {
@@ -127,7 +140,17 @@ module.exports = (env, args) => {
           parallel: true,
           uglifyOptions: uglifyJsConfig
         }),
-        new OptimizeCSSAssetsPlugin({})
+        new OptimizeCSSAssetsPlugin({
+          cssProcessor: {
+            process: (input, opts) => {
+              delete opts.to
+
+              const cleanCss = new CleanCSS(Object.assign(cleanCssConfig, opts))
+              return cleanCss.minify(input)
+                .then(output => ({ css: output.styles }))
+            }
+          }
+        })
       ]
     }
 
