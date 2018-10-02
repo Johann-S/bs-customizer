@@ -7,6 +7,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 
 let fileName = 'bs-customizer.min'
 const paths = {
@@ -72,6 +73,9 @@ module.exports = (env, args) => {
         template: path.resolve(__dirname, 'src/index.html'),
         filename: path.resolve(__dirname, 'index.html'),
         minify: isProd ? htmlminifierOpts : false
+      }),
+      new ScriptExtHtmlWebpackPlugin({
+        defaultAttribute: 'async'
       }),
       new WriteFilePlugin()
     ],
