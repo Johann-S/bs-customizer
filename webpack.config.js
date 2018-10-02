@@ -5,28 +5,43 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WriteFilePlugin = require('write-file-webpack-plugin')
 
 let fileName = 'bs-customizer.min'
 const paths = {
-  src: `${path.join(__dirname, 'src/')}*.js`,
-  index: `${path.join(__dirname, './')}*.html`
+  src: `${path.join(__dirname, 'src/js/')}*.js`,
+  index: `${path.join(__dirname, 'src/')}*.html`
 }
 
 module.exports = (env, args) => {
+  const isProd = args.mode === 'production'
+
   const conf = {
-    entry: './src/index.js',
+    entry: './src/js/index.js',
     output: {
       filename: `${fileName}.js`,
       path: path.resolve(__dirname, 'dist')
     },
     plugins: [
       new CopyWebpackPlugin([
-        'src/lib/sass.worker.js'
+        'src/js/lib/sass.worker.js'
       ]),
       new MiniCssExtractPlugin({
         filename: `${fileName}.css`,
         chunkFilename: '[id].css'
-      })
+      }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/index.html'),
+        filename: path.resolve(__dirname, 'index.html'),
+        minify: isProd ? {
+          removeComments: false,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          preserveLineBreaks: true
+        } : undefined
+      }),
+      new WriteFilePlugin()
     ],
     module: {
       rules: [
@@ -68,7 +83,7 @@ module.exports = (env, args) => {
     }
   }
 
-  if (args.mode === 'production') {
+  if (isProd) {
     conf.optimization = {
       minimizer: [
         new UglifyJsPlugin({
