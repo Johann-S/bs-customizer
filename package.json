@@ -52,5 +52,8 @@
     "ignore": [
       "src/js/lib/*.js"
     ]
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
