@@ -120,7 +120,8 @@ module.exports = (env, args) => {
       minimizer: [
         new UglifyJsPlugin({
           cache: true,
-          parallel: true
+          parallel: true,
+          uglifyOptions: uglifyJsConfig
         }),
         new OptimizeCSSAssetsPlugin({})
       ]
