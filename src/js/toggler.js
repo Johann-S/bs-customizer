@@ -28,9 +28,17 @@ $(() => {
     const checkedList = list.filter(chkBox => chkBox.checked)
 
     if (checkedList.length > 0) {
-      list.forEach(chkBox => { chkBox.checked = false })
+      list.forEach(chkBox => {
+        if (chkBox.checked) {
+          chkBox.click()
+        }
+      })
     } else {
-      list.forEach(chkBox => { chkBox.checked = true })
+      list.forEach(chkBox => {
+        if (!chkBox.checked) {
+          chkBox.click()
+        }
+      })
     }
   })
 })
