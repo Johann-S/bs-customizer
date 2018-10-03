@@ -72,8 +72,10 @@ module.exports = (env, args) => {
   const conf = {
     entry: './src/js/index.js',
     output: {
-      filename: `${fileName}.js`,
-      path: path.resolve(__dirname, 'dist')
+      filename: '[name].bundle.js',
+      chunkFilename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: '/dist/'
     },
     plugins: [
       new CleanWebpackPlugin([
@@ -84,8 +86,7 @@ module.exports = (env, args) => {
         'src/js/lib/sass.worker.js'
       ]),
       new MiniCssExtractPlugin({
-        filename: `${fileName}.css`,
-        chunkFilename: '[id].css'
+        chunkFilename: `${fileName}.css`
       }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
@@ -105,7 +106,8 @@ module.exports = (env, args) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-syntax-dynamic-import']
             }
           }
         },

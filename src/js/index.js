@@ -1,7 +1,6 @@
 import $ from 'jquery'
 import Sass from 'sass.js/dist/sass'
 
-import { build } from './build'
 import { formatList, ucfirst, getSassWorkerPath, supportedBrowser } from './util'
 import {
   createModal,
@@ -58,12 +57,15 @@ $(() => {
     }
 
     showModal(() => {
-      const fileName = 'bootstrap.custom.zip'
-      const pluginList = formatList(formData.map((value) => ucfirst(value.name)))
+      import(/* webpackChunkName: "build" */ './build')
+        .then(({ build }) => {
+          const fileName = 'bootstrap.custom.zip'
+          const pluginList = formatList(formData.map((value) => ucfirst(value.name)))
 
-      build(pluginList, $checkboxPopper[0].checked, $chkMinify[0].checked, $chkCSS[0].checked)
-        .then(url => {
-          updateLink(fileName, url)
+          build(pluginList, $checkboxPopper[0].checked, $chkMinify[0].checked, $chkCSS[0].checked)
+            .then(url => {
+              updateLink(fileName, url)
+            })
         })
     })
   })
