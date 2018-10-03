@@ -17,19 +17,19 @@ let chooseToImportPopper = true
 
 $(() => {
   if (!supportedBrowser()) {
-    $('#alertBrowser').removeClass('d-none')
+    $('.js-alert-browser').removeClass('d-none')
     return
   }
 
   Sass.setWorkerUrl(getSassWorkerPath())
   createModal()
 
-  const $form = $('form')
-  const $checkBoxRequirePopper = $(document.querySelectorAll('.require-popper'))
-  const $checkboxPopper = $('#checkboxPopper')
-  const $chkMinify = $('#chkMinify')
-  const $chkCSS = $('#chkCSS')
-  const popperCheckboxList = [].slice.call(document.querySelectorAll('.require-popper'))
+  const $form = $('.js-form-customize')
+  const $checkBoxRequirePopper = $form.find('.js-require-popper')
+  const $checkboxPopper = $form.find('.js-check-popper')
+  const $chkMinify = $form.find('.js-check-minify')
+  const $chkCSS = $form.find('.js-check-css')
+  const popperCheckboxList = [].slice.call(document.querySelectorAll('.js-require-popper'))
 
   $checkboxPopper.on('click', function () {
     chooseToImportPopper = this.checked
