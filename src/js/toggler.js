@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-group').forEach(group => {
     const checkboxes = [...group.querySelectorAll('.js-checkbox')]
 
@@ -18,4 +18,4 @@
       }
     });
   });
-})()
+})
