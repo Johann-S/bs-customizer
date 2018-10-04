@@ -134,6 +134,11 @@ module.exports = (env, args) => {
           }
         }
       ]
+    },
+    resolve: {
+      alias: {
+        jquery$: path.resolve(__dirname, 'node_modules/jquery/dist/jquery.slim.js')
+      }
     }
   }
 

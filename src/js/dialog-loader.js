@@ -1,4 +1,4 @@
-import $ from 'jquery/dist/jquery.slim'
+import $ from 'jquery'
 import 'bootstrap/js/dist/modal'
 import 'boxicons/css/boxicons.css'
 

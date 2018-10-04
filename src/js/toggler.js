@@ -1,4 +1,4 @@
-import $ from 'jquery/dist/jquery.slim'
+import $ from 'jquery'
 
 $(() => {
   const jsCheckboxList = [].slice.call(document.querySelectorAll('.js-checkbox'))
