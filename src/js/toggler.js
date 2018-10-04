@@ -1,42 +1,23 @@
 import $ from 'jquery'
 
 $(() => {
-  const jsCheckboxList = [].slice.call(document.querySelectorAll('.js-checkbox'))
-  const layoutCheckboxList = [].slice.call(document.querySelectorAll('.layout-checkbox'))
-  const contentCheckboxList = [].slice.call(document.querySelectorAll('.content-checkbox'))
-  const componentsCheckboxList = [].slice.call(document.querySelectorAll('.components-checkbox'))
-  const utilitiesCheckboxList = [].slice.call(document.querySelectorAll('.utilities-checkbox'))
+  $(document.querySelectorAll('.js-group')).each(function () {
+    const checkboxes = [].slice.call(this.querySelectorAll('.js-checkbox'))
 
-  const getList = $button => {
-    if ($button.hasClass('js')) {
-      return jsCheckboxList
-    } else if ($button.hasClass('layout')) {
-      return layoutCheckboxList
-    } else if ($button.hasClass('content')) {
-      return contentCheckboxList
-    } else if ($button.hasClass('components')) {
-      return componentsCheckboxList
-    } else {
-      return utilitiesCheckboxList
-    }
-  }
+    $(this.querySelector('.js-btn-toggle')).on('click', { checkboxes }, function () {
+      const checkedList = checkboxes.filter(chkBox => chkBox.checked)
 
-  $('.btn-toggle').on('click', function (event) {
-    event.preventDefault()
-
-    const list = getList($(this))
-    const checkedList = list.filter(chkBox => chkBox.checked)
-
-    if (checkedList.length > 0) {
-      // Uncheck all checked checkboxes
-      checkedList.forEach(chkBox => {
-        $(chkBox).trigger('click')
-      })
-    } else {
-      // Check all checkboxes
-      list.forEach(chkBox => {
-        chkBox.click()
-      })
-    }
+      if (checkedList.length > 0) {
+        // Uncheck all checked checkboxes
+        checkedList.forEach(chkBox => {
+          chkBox.click()
+        })
+      } else {
+        // Check all checkboxes
+        checkboxes.forEach(chkBox => {
+          chkBox.click()
+        })
+      }
+    })
   })
 })
