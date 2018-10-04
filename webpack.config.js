@@ -1,5 +1,6 @@
 const path = require('path')
 const glob = require('glob-all')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -75,6 +76,10 @@ module.exports = (env, args) => {
       path: path.resolve(__dirname, 'dist')
     },
     plugins: [
+      new CleanWebpackPlugin([
+        path.resolve(__dirname, 'dist'),
+        path.resolve(__dirname, 'index.html')
+      ]),
       new CopyWebpackPlugin([
         'src/js/lib/sass.worker.js'
       ]),
