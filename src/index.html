@@ -15,13 +15,13 @@
       </div>
 		</header>
 		<div class="container flex-grow-1 flex-shrink-0">
-      <div id="alertBrowser" class="alert alert-danger d-none" role="alert">
+      <div class="js-alert-browser alert alert-danger d-none" role="alert">
         <p class="text-center">
           Your browser is not up to date, please update your browser or try another one.
           You can check this website to find a better one: <a href="https://browsehappy.com/">https://browsehappy.com</a>
         </p>
       </div>
-      <form>
+      <form class="js-form-customize">
         <div class="mt-3">
           <h2 class="h4 my-3">
             JavaScript Plugins
@@ -71,7 +71,7 @@
           <div class="row mt-3">
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper js-checkbox" type="checkbox" id="chkDropdown" name="dropdown">
+                <input class="custom-control-input js-require-popper js-checkbox" type="checkbox" id="chkDropdown" name="dropdown">
                 <label class="custom-control-label" for="chkDropdown">
                   Dropdown
                 </label>
@@ -89,7 +89,7 @@
 
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper js-checkbox" type="checkbox" id="chkPopover" name="popover">
+                <input class="custom-control-input js-require-popper js-checkbox" type="checkbox" id="chkPopover" name="popover">
                 <label class="custom-control-label" for="chkPopover">
                   Popover
                 </label>
@@ -117,7 +117,7 @@
 
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input class="custom-control-input require-popper js-checkbox" type="checkbox" id="chkTooltip" name="tooltip">
+                <input class="custom-control-input js-require-popper js-checkbox" type="checkbox" id="chkTooltip" name="tooltip">
                 <label class="custom-control-label" for="chkTooltip">
                   Tooltip
                 </label>
@@ -472,25 +472,25 @@
           <div class="row">
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input id="checkboxPopper" class="custom-control-input" type="checkbox">
+                <input id="checkboxPopper" class="custom-control-input js-check-popper" type="checkbox">
                 <label class="custom-control-label" for="checkboxPopper">
                   Include Popper.js
                 </label>
               </div>
             </div>
-  
+
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input id="chkMinify" class="custom-control-input" type="checkbox" checked>
+                <input id="chkMinify" class="custom-control-input js-check-minify" type="checkbox" checked>
                 <label class="custom-control-label" for="chkMinify">
                   Minify
                 </label>
               </div>
             </div>
-  
+
             <div class="col-3">
               <div class="custom-control custom-checkbox">
-                <input id="chkCSS" class="custom-control-input" type="checkbox">
+                <input id="chkCSS" class="custom-control-input js-check-css" type="checkbox">
                 <label class="custom-control-label" for="chkCSS">
                   Include JavaScript plugin CSS
                 </label>
@@ -499,7 +499,7 @@
           </div>
         </div>
         <div class="mt-5">
-          <button id="btnSubmit" type="submit" class="btn btn-outline-primary btn-block btn-lg mt-3">
+          <button type="submit" class="btn btn-outline-primary btn-block btn-lg mt-3 js-btn-customize">
             <span class="bx bx-cog" aria-hidden="true"></span> Build
           </button>
         </div>
