@@ -25,7 +25,7 @@ $(() => {
   createModal()
 
   const $form = $('form')
-  const $checkBoxRequirePopper = $(document.querySelector('.require-popper'))
+  const $checkBoxRequirePopper = $(document.querySelectorAll('.require-popper'))
   const $checkboxPopper = $('#checkboxPopper')
   const $chkMinify = $('#chkMinify')
   const $chkCSS = $('#chkCSS')
