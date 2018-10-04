@@ -1,10 +1,8 @@
-import $ from 'jquery'
+(() => {
+  document.querySelectorAll('.js-group').forEach(group => {
+    const checkboxes = [...group.querySelectorAll('.js-checkbox')]
 
-$(() => {
-  $(document.querySelectorAll('.js-group')).each( function () {
-    const checkboxes = [].slice.call(this.querySelectorAll('.js-checkbox'))
-
-    $(this.querySelector('.js-btn-toggle')).on('click', {checkboxes}, function(){
+    group.querySelector('.js-btn-toggle').addEventListener('click', () => {
       const checkedList = checkboxes.filter(chkBox => chkBox.checked)
 
       if (checkedList.length > 0) {
@@ -20,4 +18,4 @@ $(() => {
       }
     });
   });
-})
+})()
