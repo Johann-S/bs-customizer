@@ -28,9 +28,15 @@ $(() => {
     const checkedList = list.filter(chkBox => chkBox.checked)
 
     if (checkedList.length > 0) {
-      list.forEach(chkBox => { chkBox.checked = false })
+      // Uncheck all checked checkboxes
+      checkedList.forEach(chkBox => {
+        $(chkBox).trigger('click')
+      })
     } else {
-      list.forEach(chkBox => { chkBox.checked = true })
+      // Check all checkboxes
+      list.forEach(chkBox => {
+        chkBox.click()
+      })
     }
   })
 })
