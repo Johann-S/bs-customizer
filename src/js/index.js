@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery/dist/jquery.slim'
 import Sass from 'sass.js/dist/sass'
 
 import { build } from './build'
