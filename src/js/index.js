@@ -8,7 +8,7 @@ import {
   showModal,
   updateLink
 } from './dialog-loader'
-import './toggler'
+import { initToggler } from './toggler'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import '../css/main.css'
@@ -23,6 +23,7 @@ $(() => {
 
   Sass.setWorkerUrl(getSassWorkerPath())
   createModal()
+  initToggler()
 
   const $form = $('.js-form-customize')
   const $checkBoxRequirePopper = $form.find('.js-require-popper')
