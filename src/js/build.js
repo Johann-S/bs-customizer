@@ -2,12 +2,31 @@ import axios from 'axios'
 import JSZip from 'jszip'
 import Sass from 'sass.js/dist/sass'
 import CleanCSS from './lib/clean-css'
+import autoprefixer from './lib/autoprefixer'
 
 import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, generateLink } from './file-util'
 import { formatScssList, uniqArray } from './util'
 
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
+const autoPrefixerConfig = {
+  cascade: false,
+  from: undefined,
+  browsers: [
+    '>= 1%',
+    'last 1 major version',
+    'not dead',
+    'Chrome >= 45',
+    'Firefox >= 38',
+    'Edge >= 12',
+    'Explorer >= 10',
+    'iOS >= 9',
+    'Safari >= 9',
+    'Android >= 4.4',
+    'Opera >= 30'
+  ]
+}
+
 const configCleanCSS = {
   level: 1,
   format: {
@@ -71,12 +90,16 @@ const buildScss = (files, minify) => {
 
         sass.compile(result.join(' '), result => {
           if (result.status === 0) {
-            let cssContent = result.text
-            if (minify) {
-              cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
-            }
+            autoprefixer.process(result.text, autoPrefixerConfig)
+              .then(result => {
+                let cssContent = result.css
 
-            resolve(cssContent)
+                if (minify) {
+                  cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
+                }
+
+                resolve(cssContent)
+              })
           } else {
             reject(result.message)
           }
