@@ -125,7 +125,8 @@ module.exports = (env, args) => {
           test: /\.(eot|ttf|woff|woff2)$/,
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name].[ext]'
+            name: 'fonts/[name].[ext]',
+            publicPath: './'
           }
         },
         {
@@ -145,6 +146,7 @@ module.exports = (env, args) => {
   }
 
   if (isProd) {
+    conf.output.publicPath = 'dist/'
     conf.optimization = {
       minimizer: [
         new UglifyJsPlugin({
