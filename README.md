@@ -1,6 +1,6 @@
 # bs-customizer
 
-[![Build Status](https://img.shields.io/appveyor/ci/Johann-S/bs-customizer.svg)](https://ci.appveyor.com/project/Johann-S/bs-customizer)
+[![Build Status](https://img.shields.io/appveyor/ci/Johann-S/bs-customizer/master.svg)](https://ci.appveyor.com/project/Johann-S/bs-customizer)
 [![dependencies Status](https://img.shields.io/david/Johann-S/bs-customizer.svg)](https://david-dm.org/Johann-S/bs-customizer)
 [![devDependencies Status](https://img.shields.io/david/dev/Johann-S/bs-customizer.svg)](https://david-dm.org/Johann-S/bs-customizer?type=dev)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com/)
