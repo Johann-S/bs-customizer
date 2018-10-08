@@ -14,6 +14,10 @@ const configCleanCSS = {
     breakWith: 'lf'
   }
 }
+const configSass = {
+  precision: 6,
+  style: Sass.style.expanded
+}
 
 const buildJavaScript = (files, minify) => {
   return new Promise((resolve, reject) => {
@@ -34,6 +38,7 @@ const buildScss = (files, minify) => {
     axios.all(files)
       .then(scssFiles => {
         const sass = new Sass()
+        sass.options(configSass)
 
         const resultFileOrder = []
         scssFiles.forEach(result => {
