@@ -7,7 +7,7 @@
     "deploy": "gh-pages --dist ./ --src \"{index.html,dist/**}\"",
     "dev": "webpack-dev-server --open --mode=development --config webpack.config.js",
     "prod": "webpack --mode=production --config webpack.config.js",
-    "standard": "standard",
+    "standard": "standard --parser babel-eslint",
     "test": "npm run standard && npm run prod"
   },
   "keywords": [
@@ -31,6 +31,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "clean-css": "^4.2.1",
     "clean-webpack-plugin": "^0.1.19",
