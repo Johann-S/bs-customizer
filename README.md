@@ -1,3 +1,4 @@
+![img](https://github.com/richardbmx/bs-customizer/blob/master/logo106.png?raw=true)
 # bs-customizer
 
 [![Build Status](https://img.shields.io/travis/Johann-S/bs-customizer/master.svg?label=Build%20Status)](https://travis-ci.org/Johann-S/bs-customizer)
