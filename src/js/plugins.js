@@ -1,5 +1,4 @@
-const bsJsCDN = 'https://unpkg.com/bootstrap/js/dist/'
-const bsScssCDN = 'https://unpkg.com/bootstrap/scss/'
+import { bsJsCDN, bsScssCDN } from './config'
 
 const jsPlugins = {
   Alert: {
