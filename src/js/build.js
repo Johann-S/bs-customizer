@@ -4,9 +4,16 @@ import Sass from 'sass.js/dist/sass'
 import CleanCSS from './lib/clean-css'
 import autoprefixer from './lib/autoprefixer'
 
+import { bootstrapVersion } from './config'
 import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, generateLink } from './file-util'
 import { formatScssList, uniqArray } from './util'
+
+const header = `/*!
+  Bootstrap v${bootstrapVersion} (custom)
+  Built with https://johann-s.github.io/bs-customizer/
+ */
+`
 
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
 const autoPrefixerConfig = {
@@ -43,7 +50,7 @@ const buildJavaScript = (files, minify) => {
     axios.all(files)
       .then(filesData => {
         resolve(
-          createJsFileContent(filesData, minify)
+          `${header}${createJsFileContent(filesData, minify)}`
         )
       })
       .catch(() => {
@@ -98,7 +105,7 @@ const buildScss = (files, minify) => {
                   cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
                 }
 
-                resolve(cssContent)
+                resolve(`${header}${cssContent}`)
               })
           } else {
             reject(result.message)

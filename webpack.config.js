@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const CleanCSS = require('clean-css')
+const { bootstrapVersion } = require('./src/js/config')
 
 let fileName = 'bs-customizer.min'
 const paths = {
@@ -91,7 +92,8 @@ module.exports = (env, args) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
         filename: path.resolve(__dirname, 'index.html'),
-        minify: isProd ? htmlminifierOpts : false
+        minify: isProd ? htmlminifierOpts : false,
+        bsVersion: bootstrapVersion
       }),
       new ScriptExtHtmlWebpackPlugin({
         defaultAttribute: 'async'
