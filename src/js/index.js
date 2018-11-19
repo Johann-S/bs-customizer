@@ -11,7 +11,7 @@ import '../css/main.css'
 
 $(() => {
   if (!supportedBrowser()) {
-    $('.js-alert-browser').removeClass('d-none')
+    document.querySelector('.js-alert-browser').classList.remove('d-none')
     return
   }
 
@@ -19,10 +19,12 @@ $(() => {
   Sass.setWorkerUrl(getSassWorkerPath())
   createModal()
 
-  $(document.querySelector('.js-form-customize')).on('submit', function (event) {
+  const formEl = document.querySelector('.js-form-customize')
+
+  formEl.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    const formData = $(this).serializeArray()
+    const formData = $(formEl).serializeArray()
     if (formData.length === 0) {
       return
     }
