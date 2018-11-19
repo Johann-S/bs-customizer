@@ -22,7 +22,7 @@ const initToggler = () => {
           checkboxes.forEach(chkBox => { chkBox.checked = true })
         }
 
-        // Popper.js needed or not
+        // Check if Popper.js is needed or not
         checkboxPopper.checked = Boolean(popperCheckboxList.filter(chk => chk.checked).length)
       })
   })
