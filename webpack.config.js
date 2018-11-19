@@ -120,7 +120,8 @@ module.exports = (env, args) => {
               loader: MiniCssExtractPlugin.loader,
               options: {}
             },
-            'css-loader'
+            'css-loader',
+            'postcss-loader'
           ]
         }
       ]
