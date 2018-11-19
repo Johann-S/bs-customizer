@@ -16,11 +16,14 @@ const initToggler = () => {
 
         if (checkedList.length > 0) {
           // Uncheck all checked checkboxes
-          checkedList.forEach(chkBox => chkBox.click())
+          checkedList.forEach(chkBox => { chkBox.checked = false })
         } else {
           // Check all checkboxes
-          checkboxes.forEach(chkBox => chkBox.click())
+          checkboxes.forEach(chkBox => { chkBox.checked = true })
         }
+
+        // Popper.js needed or not
+        checkboxPopper.checked = Boolean(popperCheckboxList.filter(chk => chk.checked).length)
       })
   })
 
@@ -32,7 +35,7 @@ const initToggler = () => {
     chkboxNeedPopper.addEventListener('click', () => {
       if (!chkboxNeedPopper.checked) {
         const stillCheckedList = popperCheckboxList
-          .filter((chk) => chk.checked)
+          .filter(chk => chk.checked)
 
         if (stillCheckedList.length === 0) {
           checkboxPopper.checked = false
@@ -44,7 +47,9 @@ const initToggler = () => {
   })
 
   checkboxPopover.addEventListener('change', () => {
-    checkboxTooltip.checked = checkboxPopover.checked
+    if (checkboxPopover.checked && !checkboxTooltip.checked) {
+      checkboxTooltip.checked = checkboxPopover.checked
+    }
   })
 
   return {
