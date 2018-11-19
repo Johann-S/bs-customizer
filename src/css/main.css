@@ -1,3 +1,47 @@
 .no-underline {
   text-decoration: none !important;
 }
+
+.icon {
+  max-width: 25px;
+}
+
+.icon-build {
+  max-width: 20px;
+}
+
+.loader {
+  display: inline-block;
+  font-size: initial;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes spin
+{
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.spin {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}

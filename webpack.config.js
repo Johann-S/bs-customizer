@@ -120,21 +120,6 @@ module.exports = (env, args) => {
             },
             'css-loader'
           ]
-        },
-        {
-          test: /\.(eot|ttf|woff|woff2)$/,
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[ext]',
-            publicPath: './'
-          }
-        },
-        {
-          test: /\.svg/,
-          loader: 'file-loader',
-          options: {
-            name: 'svg/[name].[ext]'
-          }
         }
       ]
     },
