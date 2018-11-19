@@ -16,34 +16,16 @@
   box-sizing: border-box;
 }
 
-@-webkit-keyframes spin
-{
-  0%
-  {
-    -webkit-transform: rotate(0);
-      transform: rotate(0);
+@keyframes spin {
+  0% {
+    transform: rotate(0);
   }
-  100%
-  {
-    -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
-  }
-}
-@keyframes spin
-{
-  0%
-  {
-    -webkit-transform: rotate(0);
-      transform: rotate(0);
-  }
-  100%
-  {
-    -webkit-transform: rotate(359deg);
-      transform: rotate(359deg);
+
+  100% {
+    transform: rotate(359deg);
   }
 }
 
 .spin {
-  -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
