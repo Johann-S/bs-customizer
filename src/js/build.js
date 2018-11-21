@@ -2,7 +2,8 @@ import axios from 'axios'
 import JSZip from 'jszip'
 import Sass from 'sass.js/dist/sass'
 import CleanCSS from './lib/clean-css'
-import autoprefixer from './lib/autoprefixer'
+import postcss from 'postcss'
+import autoprefixer from 'autoprefixer'
 
 import { bootstrapVersion } from './config'
 import { jsPlugins, scssPlugins } from './plugins'
@@ -18,7 +19,6 @@ const header = `/*!
 const popperCDN = 'https://unpkg.com/popper.js/dist/umd/popper.js'
 const autoPrefixerConfig = {
   cascade: false,
-  from: undefined,
   browsers: [
     '>= 1%',
     'last 1 major version',
@@ -95,9 +95,14 @@ const buildScss = (files, minify) => {
 
         sass.compile(result.join(' '), result => {
           if (result.status === 0) {
-            autoprefixer.process(result.text, autoPrefixerConfig)
-              .then(result => {
-                let cssContent = result.css
+            let cssContent = result.text
+
+            postcss([
+              autoprefixer(autoPrefixerConfig)
+            ])
+              .process(cssContent, { from: undefined })
+              .then(compiled => {
+                cssContent = compiled.css
 
                 if (minify) {
                   cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
