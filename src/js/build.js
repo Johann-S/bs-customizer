@@ -49,9 +49,7 @@ const buildJavaScript = (files, minify) => {
   return new Promise((resolve, reject) => {
     axios.all(files)
       .then(filesData => {
-        resolve(
-          `${header}${createJsFileContent(filesData, minify)}`
-        )
+        resolve(createJsFileContent(filesData, minify))
       })
       .catch(() => {
         reject(new Error('An error occured during building JS files'))
@@ -105,7 +103,7 @@ const buildScss = (files, minify) => {
                   cssContent = new CleanCSS(configCleanCSS).minify(cssContent).styles
                 }
 
-                resolve(`${header}${cssContent}`)
+                resolve(cssContent)
               })
           } else {
             reject(result.message)
@@ -151,7 +149,7 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
     buildJavaScript(listJsRequest, minify)
       .then(jsFileContent => {
         if (jsFileContent.length > 0) {
-          zip.file(`${fileName}.js`, jsFileContent)
+          zip.file(`${fileName}.js`, `${header}${jsFileContent}`)
         }
 
         if (listScssRequest.length > 0) {
@@ -162,7 +160,7 @@ const build = (pluginList, addPopper, minify, includeCSS) => {
       })
       .then(cssContent => {
         if (cssContent.length > 0) {
-          zip.file(`${fileName}.css`, cssContent)
+          zip.file(`${fileName}.css`, `${header}${cssContent}`)
         }
 
         zip.generateAsync({ type: 'blob' })

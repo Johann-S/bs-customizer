@@ -50,7 +50,7 @@ const formatScssList = list => {
     'type',
     'images',
     'code',
-    'gird',
+    'grid',
     'tables',
     'forms',
     'buttons',
