@@ -10,9 +10,12 @@ import { jsPlugins, scssPlugins } from './plugins'
 import { createJsFileContent, generateLink } from './file-util'
 import { formatScssList, uniqArray } from './util'
 
+const year = new Date().getFullYear()
 const header = `/*!
-  Bootstrap v${bootstrapVersion} (custom)
-  Built with https://johann-s.github.io/bs-customizer/
+ * Bootstrap v${bootstrapVersion} custom (https://getbootstrap.com/)
+ * Built with https://johann-s.github.io/bs-customizer/
+ * Copyright 2011-${year} The Bootstrap Authors
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 `
 
