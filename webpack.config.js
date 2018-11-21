@@ -109,7 +109,10 @@ module.exports = (env, args) => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-syntax-dynamic-import']
+              plugins: ['@babel/plugin-syntax-dynamic-import'],
+              ignore: [
+                './src/js/lib/*.js'
+              ]
             }
           }
         },
