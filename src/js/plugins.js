@@ -244,6 +244,7 @@ const scssPlugins = {
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}_root.scss`,
+    `${bsScssCDN}_print.scss`,
     `${bsScssCDN}utilities/_display.scss`
   ],
   Embed: [
