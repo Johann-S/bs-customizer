@@ -153,6 +153,15 @@ const jsPlugins = {
       `${bsScssCDN}_transitions.scss`
     ]
   },
+  Toast: {
+    js: [
+      `${bsJsCDN}util.js`,
+      `${bsJsCDN}toast.js`
+    ],
+    scss: [
+      `${bsScssCDN}_toasts.scss`
+    ]
+  },
   Tooltip: {
     js: [
       `${bsJsCDN}util.js`,
@@ -387,6 +396,9 @@ const scssPlugins = {
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}utilities/_spacing.scss`
+  ],
+  Spinners: [
+    `${bsScssCDN}_spinners.scss`
   ],
   Tables: [
     `${bsScssCDN}_functions.scss`,
