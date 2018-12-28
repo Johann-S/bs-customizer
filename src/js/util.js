@@ -72,9 +72,11 @@ const formatScssList = list => {
     'list-group',
     'close',
     'modal',
+    'toasts',
     'tooltip',
     'popover',
-    'carousel'
+    'carousel',
+    'spinners'
   ]
 
   plugins.forEach(item => {

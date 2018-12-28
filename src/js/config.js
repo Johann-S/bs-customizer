@@ -1,4 +1,4 @@
-const bootstrapVersion = '4.1.3'
+const bootstrapVersion = '4.2.1'
 const bsJsCDN = `https://unpkg.com/bootstrap@${bootstrapVersion}/js/dist/`
 const bsScssCDN = `https://unpkg.com/bootstrap@${bootstrapVersion}/scss/`
 
