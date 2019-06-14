@@ -80,6 +80,10 @@ const buildScss = (files, minify) => {
             const path = `utilities/${fileName}`
             resultFileOrder.push(path)
             sass.writeFile(path, result.data)
+          } else if (splittedString.indexOf('vendor') !== -1) {
+            const path = `vendor/${fileName}`
+            resultFileOrder.push(path)
+            sass.writeFile(path, result.data)
           } else {
             resultFileOrder.push(fileName)
             sass.writeFile(fileName, result.data)

@@ -187,6 +187,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_badge.scss`,
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
+    `${bsScssCDN}mixins/_transition.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}_badge.scss`
   ],
@@ -240,6 +241,7 @@ const scssPlugins = {
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_background-variant.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}mixins/_text-emphasis.scss`,
     `${bsScssCDN}mixins/_text-hide.scss`,
@@ -323,6 +325,7 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}mixins/_list-group.scss`,
+    `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}_list-group.scss`
   ],
@@ -345,6 +348,9 @@ const scssPlugins = {
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}_navbar.scss`
+  ],
+  Overflow: [
+    `${bsScssCDN}utilities/_overflow.scss`
   ],
   Pagination: [
     `${bsScssCDN}_functions.scss`,
@@ -374,6 +380,7 @@ const scssPlugins = {
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
+    `${bsScssCDN}vendor/_rfs.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}_reboot.scss`
   ],
@@ -400,6 +407,9 @@ const scssPlugins = {
   Spinners: [
     `${bsScssCDN}_spinners.scss`
   ],
+  StretchedLink: [
+    `${bsScssCDN}utilities/_stretched-link.scss`
+  ],
   Tables: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
@@ -413,6 +423,7 @@ const scssPlugins = {
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_hover.scss`,
     `${bsScssCDN}mixins/_text-emphasis.scss`,
     `${bsScssCDN}mixins/_text-hide.scss`,
