@@ -36,6 +36,11 @@ const formatScssList = list => {
     result.push(list[varIndex])
   }
 
+  const rfsIndex = list.findIndex(file => file.indexOf('vendor') !== -1)
+  if (rfsIndex !== -1) {
+    result.push(list[rfsIndex])
+  }
+
   // Add mixins
   result = result.concat(mixinList)
   // Remove mixins from the list
