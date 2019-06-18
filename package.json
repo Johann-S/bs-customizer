@@ -1,6 +1,6 @@
 {
   "name": "bs-customizer",
-  "version": "1.0.0",
+  "version": "1.4.0",
   "description": "Create custom Bootstrap 4.x builds",
   "private": true,
   "scripts": {
