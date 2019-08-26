@@ -12,7 +12,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const CleanCSS = require('clean-css')
 const { bootstrapVersion } = require('./src/js/config')
 
-let fileName = 'bs-customizer.min'
+const fileName = 'bs-customizer.min'
 const paths = {
   src: `${path.join(__dirname, 'src/js/')}*.js`,
   index: `${path.join(__dirname, 'src/')}*.html`
