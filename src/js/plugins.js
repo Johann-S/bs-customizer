@@ -75,6 +75,7 @@ const jsPlugins = {
     scss: [
       `${bsScssCDN}_functions.scss`,
       `${bsScssCDN}_variables.scss`,
+      `${bsScssCDN}mixins/_deprecate.scss`,
       `${bsScssCDN}mixins/_border-radius.scss`,
       `${bsScssCDN}mixins/_box-shadow.scss`,
       `${bsScssCDN}mixins/_caret.scss`,
@@ -217,6 +218,7 @@ const scssPlugins = {
   Clearfix: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_clearfix.scss`,
     `${bsScssCDN}_root.scss`,
     `${bsScssCDN}utilities/_clearfix.scss`
@@ -270,6 +272,7 @@ const scssPlugins = {
   Float: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
     `${bsScssCDN}mixins/_float.scss`,
     `${bsScssCDN}utilities/_float.scss`
@@ -277,6 +280,7 @@ const scssPlugins = {
   Forms: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_box-shadow.scss`,
     `${bsScssCDN}mixins/_breakpoints.scss`,
@@ -298,6 +302,7 @@ const scssPlugins = {
   Images: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_border-radius.scss`,
     `${bsScssCDN}mixins/_box-shadow.scss`,
     `${bsScssCDN}mixins/_image.scss`,
@@ -396,6 +401,7 @@ const scssPlugins = {
   Sizing: [
     `${bsScssCDN}_functions.scss`,
     `${bsScssCDN}_variables.scss`,
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}utilities/_sizing.scss`
   ],
   Spacing: [
@@ -442,6 +448,7 @@ const scssPlugins = {
     `${bsScssCDN}utilities/_align.scss`
   ],
   Visibility: [
+    `${bsScssCDN}mixins/_deprecate.scss`,
     `${bsScssCDN}mixins/_visibility.scss`,
     `${bsScssCDN}utilities/_visibility.scss`
   ]
